@@ -3,6 +3,10 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "webstart", "webstart\webstart.csproj", "{53C3B778-7F08-476D-8369-6A539AE0A271}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "packages", "packages", "{A4F175AC-AEB9-4CE0-A03A-59B9B8FCB87D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "package", "package\package.csproj", "{33F1448F-92D8-4C4E-A464-98E93B0FBA93}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,8 +17,15 @@ Global
 		{53C3B778-7F08-476D-8369-6A539AE0A271}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{53C3B778-7F08-476D-8369-6A539AE0A271}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{53C3B778-7F08-476D-8369-6A539AE0A271}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33F1448F-92D8-4C4E-A464-98E93B0FBA93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33F1448F-92D8-4C4E-A464-98E93B0FBA93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33F1448F-92D8-4C4E-A464-98E93B0FBA93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33F1448F-92D8-4C4E-A464-98E93B0FBA93}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{33F1448F-92D8-4C4E-A464-98E93B0FBA93} = {A4F175AC-AEB9-4CE0-A03A-59B9B8FCB87D}
 	EndGlobalSection
 EndGlobal
