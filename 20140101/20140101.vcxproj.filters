@@ -31,6 +31,18 @@
     <Filter Include="Common">
       <UniqueIdentifier>{ffcc6715-96b1-48ef-9316-4ce7e7caa7e9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Account">
+      <UniqueIdentifier>{840a152b-f5cf-41c6-9f25-f6f40391530d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SqlQuery">
+      <UniqueIdentifier>{22465b9d-7ac6-40dd-8be1-a93684e25154}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SqlQuery\SqlFormat">
+      <UniqueIdentifier>{f6c5575b-9863-4320-823e-061bb6100204}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SqlQuery\SqlConnection">
+      <UniqueIdentifier>{9e36b632-cb3b-492f-b182-9b39dae85128}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="rapidxml.hpp">
@@ -120,6 +132,42 @@
     <ClInclude Include="PropertyInc.h">
       <Filter>Property</Filter>
     </ClInclude>
+    <ClInclude Include="SqlInc.h">
+      <Filter>SqlQuery</Filter>
+    </ClInclude>
+    <ClInclude Include="AccountConfig.h">
+      <Filter>Account</Filter>
+    </ClInclude>
+    <ClInclude Include="AccountInc.h">
+      <Filter>Account</Filter>
+    </ClInclude>
+    <ClInclude Include="AccountLoginB.h">
+      <Filter>Account</Filter>
+    </ClInclude>
+    <ClInclude Include="ISqlHeadstream.h">
+      <Filter>SqlQuery\SqlFormat</Filter>
+    </ClInclude>
+    <ClInclude Include="ISqlStream.h">
+      <Filter>SqlQuery\SqlFormat</Filter>
+    </ClInclude>
+    <ClInclude Include="SqlDeal_.h">
+      <Filter>SqlQuery\SqlFormat</Filter>
+    </ClInclude>
+    <ClInclude Include="SqlFieldId_.h">
+      <Filter>SqlQuery\SqlFormat</Filter>
+    </ClInclude>
+    <ClInclude Include="SqlType_.h">
+      <Filter>SqlQuery\SqlFormat</Filter>
+    </ClInclude>
+    <ClInclude Include="SqlFormat.h">
+      <Filter>SqlQuery\SqlFormat</Filter>
+    </ClInclude>
+    <ClInclude Include="SqlConnection.h">
+      <Filter>SqlQuery\SqlConnection</Filter>
+    </ClInclude>
+    <ClInclude Include="SqlSingleton.h">
+      <Filter>SqlQuery\SqlConnection</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="blocksort.c">
@@ -178,6 +226,21 @@
     </ClCompile>
     <ClCompile Include="HashSingleton.cpp">
       <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="AccountConfig.cpp">
+      <Filter>Account</Filter>
+    </ClCompile>
+    <ClCompile Include="AccountLoginB.cpp">
+      <Filter>Account</Filter>
+    </ClCompile>
+    <ClCompile Include="SqlFormat.cpp">
+      <Filter>SqlQuery\SqlFormat</Filter>
+    </ClCompile>
+    <ClCompile Include="SqlConnection.cpp">
+      <Filter>SqlQuery\SqlConnection</Filter>
+    </ClCompile>
+    <ClCompile Include="SqlSingleton.cpp">
+      <Filter>SqlQuery\SqlConnection</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

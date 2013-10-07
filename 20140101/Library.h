@@ -11,5 +11,11 @@
 #include <boost/noncopyable.hpp>
 #include <boost/algorithm/string.hpp>
 
+#include <mysql_connection.h>
+#include <mysql_driver.h>
+#include <statement.h>
+
 using namespace rapidxml;
 using namespace boost;
+using namespace sql;
+using namespace sql::mysql;

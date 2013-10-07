@@ -1,6 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="command|Win32">
+      <Configuration>command</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
       <Platform>Win32</Platform>
@@ -28,6 +32,9 @@
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='command|Win32'">
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
@@ -48,6 +55,14 @@
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -63,7 +78,30 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='command|Win32'">
+    <PostBuildEvent>
+      <Command>mkdir $(SolutionDir)..\bin\home\www.wanmei.com\account\$account.core\
+copy *.xml $(SolutionDir)..\bin\home\www.wanmei.com\account\$account.core\*.xml
+
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
   <ItemGroup>
+    <None Include="Account.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="..\20140101\packages.xml" />
+    <Xml Include="accountConfig.xml" />
+    <Xml Include="sqlConfig.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\20140101\AccountConfig.cpp" />
+    <ClCompile Include="..\20140101\AccountLoginB.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\20140101\AccountConfig.h" />
+    <ClInclude Include="..\20140101\AccountInc.h" />
+    <ClInclude Include="..\20140101\AccountLoginB.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
