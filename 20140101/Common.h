@@ -12,7 +12,7 @@ typedef unsigned long __u32;
 typedef __int64 __i64;
 typedef unsigned __int64 __u64;
 
-#ifdef EXPORT
+#ifdef APIEXPORT
 #define __funapi __declspec(dllexport)
 #else
 #define __funapi __declspec(dllimport)

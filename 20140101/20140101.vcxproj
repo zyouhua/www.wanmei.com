@@ -16,6 +16,7 @@
     <ClInclude Include="bzlib.h" />
     <ClInclude Include="bzlib_private.h" />
     <ClInclude Include="Common.h" />
+    <ClInclude Include="CommonInc.h" />
     <ClInclude Include="CompressSingleton.h" />
     <ClInclude Include="crypt_buf.h" />
     <ClInclude Include="HashSingleton.h" />
@@ -26,13 +27,16 @@
     <ClInclude Include="MpqHead.h" />
     <ClInclude Include="MpqReader.h" />
     <ClInclude Include="MpqWriter.h" />
+    <ClInclude Include="PackageInc.h" />
     <ClInclude Include="Property.h" />
     <ClInclude Include="PropertyId.h" />
+    <ClInclude Include="PropertyInc.h" />
     <ClInclude Include="PropertyMgr.h" />
     <ClInclude Include="rapidxml.hpp" />
     <ClInclude Include="rapidxml_iterators.hpp" />
     <ClInclude Include="rapidxml_print.hpp" />
     <ClInclude Include="rapidxml_utils.hpp" />
+    <ClInclude Include="SysInc.h" />
     <ClInclude Include="XmlReader.h" />
     <ClInclude Include="_convert.h" />
     <ClInclude Include="__singleton.h" />

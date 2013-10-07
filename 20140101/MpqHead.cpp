@@ -1,5 +1,4 @@
 #include "Include.h"
-#include "MpqHead.h"
 
 namespace std {
 

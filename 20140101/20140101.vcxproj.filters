@@ -28,6 +28,9 @@
     <Filter Include="Property">
       <UniqueIdentifier>{db4b5d4b-39a4-4132-8c5e-63f0a51e6c38}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{ffcc6715-96b1-48ef-9316-4ce7e7caa7e9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="rapidxml.hpp">
@@ -84,26 +87,38 @@
     <ClInclude Include="MpqWriter.h">
       <Filter>Package\Mpq</Filter>
     </ClInclude>
-    <ClInclude Include="__singleton.h">
+    <ClInclude Include="Include.h">
       <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="PackageInc.h">
+      <Filter>Package</Filter>
+    </ClInclude>
+    <ClInclude Include="__singleton.h">
+      <Filter>Common</Filter>
     </ClInclude>
     <ClInclude Include="_convert.h">
-      <Filter>Include</Filter>
+      <Filter>Common</Filter>
     </ClInclude>
     <ClInclude Include="Common.h">
-      <Filter>Include</Filter>
+      <Filter>Common</Filter>
     </ClInclude>
     <ClInclude Include="CompressSingleton.h">
-      <Filter>Include</Filter>
+      <Filter>Common</Filter>
     </ClInclude>
     <ClInclude Include="HashSingleton.h">
-      <Filter>Include</Filter>
+      <Filter>Common</Filter>
     </ClInclude>
-    <ClInclude Include="Include.h">
+    <ClInclude Include="CommonInc.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="SysInc.h">
       <Filter>Include</Filter>
     </ClInclude>
     <ClInclude Include="Library.h">
       <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="PropertyInc.h">
+      <Filter>Property</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -159,10 +174,10 @@
       <Filter>Package\Mpq</Filter>
     </ClCompile>
     <ClCompile Include="CompressSingleton.cpp">
-      <Filter>Include</Filter>
+      <Filter>Common</Filter>
     </ClCompile>
     <ClCompile Include="HashSingleton.cpp">
-      <Filter>Include</Filter>
+      <Filter>Common</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

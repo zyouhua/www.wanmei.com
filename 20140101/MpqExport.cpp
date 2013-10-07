@@ -1,5 +1,5 @@
 #include "Include.h"
-#include "MpqExport.h"
+
 using namespace std;
 
 //MpqReader
