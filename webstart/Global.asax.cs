@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Routing;
+using System.Runtime.InteropServices;
 
 namespace webstart
 {
@@ -19,6 +20,13 @@ namespace webstart
             WebApiConfig.Register(GlobalConfiguration.Configuration);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+        }
+
+        [DllImport(@"20140101.dll")]
+        static extern void m00000005();
+        protected void Application_End()
+        {
+            m00000005();
         }
     }
 }
