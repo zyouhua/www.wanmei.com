@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Include">
+      <UniqueIdentifier>{9a30ad6b-b566-47a5-b1c4-4f34438407c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Library">
+      <UniqueIdentifier>{5320e211-daf3-47db-8376-5db47b47b70f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Package">
+      <UniqueIdentifier>{bdf67af2-4f56-4211-b9cb-058858efe249}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Library\Bzlib">
+      <UniqueIdentifier>{e84a6a85-9069-48c5-b39d-b45c75075b22}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Library\RapidXml">
+      <UniqueIdentifier>{cef5e96c-dd7d-4a6e-b816-946a89c7a551}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Package\Bin">
+      <UniqueIdentifier>{be447196-b97d-44c0-ad83-8f49ac103693}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Package\Mpq">
+      <UniqueIdentifier>{19cddce3-3b01-4960-a165-e1a43647b910}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Package\Xml">
+      <UniqueIdentifier>{44265e2b-f5e5-4b6a-b6ad-53d25b4ba9ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Property">
+      <UniqueIdentifier>{db4b5d4b-39a4-4132-8c5e-63f0a51e6c38}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="rapidxml.hpp">
+      <Filter>Library\RapidXml</Filter>
+    </ClInclude>
+    <ClInclude Include="rapidxml_iterators.hpp">
+      <Filter>Library\RapidXml</Filter>
+    </ClInclude>
+    <ClInclude Include="rapidxml_print.hpp">
+      <Filter>Library\RapidXml</Filter>
+    </ClInclude>
+    <ClInclude Include="rapidxml_utils.hpp">
+      <Filter>Library\RapidXml</Filter>
+    </ClInclude>
+    <ClInclude Include="bzlib.h">
+      <Filter>Library\Bzlib</Filter>
+    </ClInclude>
+    <ClInclude Include="bzlib_private.h">
+      <Filter>Library\Bzlib</Filter>
+    </ClInclude>
+    <ClInclude Include="crypt_buf.h">
+      <Filter>Library\Bzlib</Filter>
+    </ClInclude>
+    <ClInclude Include="Property.h">
+      <Filter>Property</Filter>
+    </ClInclude>
+    <ClInclude Include="PropertyId.h">
+      <Filter>Property</Filter>
+    </ClInclude>
+    <ClInclude Include="PropertyMgr.h">
+      <Filter>Property</Filter>
+    </ClInclude>
+    <ClInclude Include="BinReader.h">
+      <Filter>Package\Bin</Filter>
+    </ClInclude>
+    <ClInclude Include="BinWriter.h">
+      <Filter>Package\Bin</Filter>
+    </ClInclude>
+    <ClInclude Include="XmlReader.h">
+      <Filter>Package\Xml</Filter>
+    </ClInclude>
+    <ClInclude Include="MpqExport.h">
+      <Filter>Package\Mpq</Filter>
+    </ClInclude>
+    <ClInclude Include="MpqHash.h">
+      <Filter>Package\Mpq</Filter>
+    </ClInclude>
+    <ClInclude Include="MpqHead.h">
+      <Filter>Package\Mpq</Filter>
+    </ClInclude>
+    <ClInclude Include="MpqReader.h">
+      <Filter>Package\Mpq</Filter>
+    </ClInclude>
+    <ClInclude Include="MpqWriter.h">
+      <Filter>Package\Mpq</Filter>
+    </ClInclude>
+    <ClInclude Include="__singleton.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="_convert.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Common.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="CompressSingleton.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="HashSingleton.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Library.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="blocksort.c">
+      <Filter>Library\Bzlib</Filter>
+    </ClCompile>
+    <ClCompile Include="bzlib.c">
+      <Filter>Library\Bzlib</Filter>
+    </ClCompile>
+    <ClCompile Include="compress.c">
+      <Filter>Library\Bzlib</Filter>
+    </ClCompile>
+    <ClCompile Include="crctable.c">
+      <Filter>Library\Bzlib</Filter>
+    </ClCompile>
+    <ClCompile Include="decompress.c">
+      <Filter>Library\Bzlib</Filter>
+    </ClCompile>
+    <ClCompile Include="huffman.c">
+      <Filter>Library\Bzlib</Filter>
+    </ClCompile>
+    <ClCompile Include="randtable.c">
+      <Filter>Library\Bzlib</Filter>
+    </ClCompile>
+    <ClCompile Include="Property.cpp">
+      <Filter>Property</Filter>
+    </ClCompile>
+    <ClCompile Include="PropertyMgr.cpp">
+      <Filter>Property</Filter>
+    </ClCompile>
+    <ClCompile Include="BinReader.cpp">
+      <Filter>Package\Bin</Filter>
+    </ClCompile>
+    <ClCompile Include="BinWriter.cpp">
+      <Filter>Package\Bin</Filter>
+    </ClCompile>
+    <ClCompile Include="XmlReader.cpp">
+      <Filter>Package\Xml</Filter>
+    </ClCompile>
+    <ClCompile Include="MpqExport.cpp">
+      <Filter>Package\Mpq</Filter>
+    </ClCompile>
+    <ClCompile Include="MpqHash.cpp">
+      <Filter>Package\Mpq</Filter>
+    </ClCompile>
+    <ClCompile Include="MpqHead.cpp">
+      <Filter>Package\Mpq</Filter>
+    </ClCompile>
+    <ClCompile Include="MpqReader.cpp">
+      <Filter>Package\Mpq</Filter>
+    </ClCompile>
+    <ClCompile Include="MpqWriter.cpp">
+      <Filter>Package\Mpq</Filter>
+    </ClCompile>
+    <ClCompile Include="CompressSingleton.cpp">
+      <Filter>Include</Filter>
+    </ClCompile>
+    <ClCompile Include="HashSingleton.cpp">
+      <Filter>Include</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

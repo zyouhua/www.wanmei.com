@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BinReader.h" />
+    <ClInclude Include="BinWriter.h" />
+    <ClInclude Include="bzlib.h" />
+    <ClInclude Include="bzlib_private.h" />
+    <ClInclude Include="Common.h" />
+    <ClInclude Include="CompressSingleton.h" />
+    <ClInclude Include="crypt_buf.h" />
+    <ClInclude Include="HashSingleton.h" />
+    <ClInclude Include="Include.h" />
+    <ClInclude Include="Library.h" />
+    <ClInclude Include="MpqExport.h" />
+    <ClInclude Include="MpqHash.h" />
+    <ClInclude Include="MpqHead.h" />
+    <ClInclude Include="MpqReader.h" />
+    <ClInclude Include="MpqWriter.h" />
+    <ClInclude Include="Property.h" />
+    <ClInclude Include="PropertyId.h" />
+    <ClInclude Include="PropertyMgr.h" />
+    <ClInclude Include="rapidxml.hpp" />
+    <ClInclude Include="rapidxml_iterators.hpp" />
+    <ClInclude Include="rapidxml_print.hpp" />
+    <ClInclude Include="rapidxml_utils.hpp" />
+    <ClInclude Include="XmlReader.h" />
+    <ClInclude Include="_convert.h" />
+    <ClInclude Include="__singleton.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="BinReader.cpp" />
+    <ClCompile Include="BinWriter.cpp" />
+    <ClCompile Include="blocksort.c" />
+    <ClCompile Include="bzlib.c" />
+    <ClCompile Include="compress.c" />
+    <ClCompile Include="CompressSingleton.cpp" />
+    <ClCompile Include="crctable.c" />
+    <ClCompile Include="decompress.c" />
+    <ClCompile Include="HashSingleton.cpp" />
+    <ClCompile Include="huffman.c" />
+    <ClCompile Include="MpqExport.cpp" />
+    <ClCompile Include="MpqHash.cpp" />
+    <ClCompile Include="MpqHead.cpp" />
+    <ClCompile Include="MpqReader.cpp" />
+    <ClCompile Include="MpqWriter.cpp" />
+    <ClCompile Include="Property.cpp" />
+    <ClCompile Include="PropertyMgr.cpp" />
+    <ClCompile Include="randtable.c" />
+    <ClCompile Include="XmlReader.cpp" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{9B5076F6-1769-4EDD-A5BF-F58E0B9189E8}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>My20140101</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)..\bin\package\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)..\bin\package\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>APIEXPORT;WIN32;_DEBUG;_WINDOWS;_USRDLL;MY20140101_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../include/;../include/mysql/;../include/mysqlcppconn/;../include/mysqlcppconn/cppconn</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>../library/debug/</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libmysql.lib;mysqlclient.lib;mysqlcppconn-static.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>APIEXPORT;WIN32;NDEBUG;_WINDOWS;_USRDLL;MY20140101_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../include/;../include/mysql/;../include/mysqlcppconn/;../include/mysqlcppconn/cppconn</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>../library/release/</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libmysql.lib;mysqlclient.lib;mysqlcppconn-static.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

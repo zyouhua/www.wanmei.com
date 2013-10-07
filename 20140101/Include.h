@@ -1,0 +1,24 @@
+#pragma once
+
+#include <stack>
+#include <string>
+#include <list>
+#include <map>
+#include <fstream>
+#include <locale>
+#include "Common.h"
+#include "Library.h"
+#include "__singleton.h"
+#include "_convert.h"
+#include "HashSingleton.h"
+#include "CompressSingleton.h"
+#include "XmlReader.h"
+#include "BinReader.h"
+#include "BinWriter.h"
+#include "MpqHash.h"
+#include "MpqHead.h"
+#include "MpqReader.h"
+#include "MpqWriter.h"
+#include "Property.h"
+#include "PropertyId.h"
+#include "PropertyMgr.h"

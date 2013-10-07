@@ -46,7 +46,7 @@ namespace webstart
         {
 #if DEBUG
             string systemPath_ = HostingEnvironment.MapPath(@"~");
-            systemPath_ = Path.Combine(systemPath_, @"..\..\bin\20140101.dat");
+            systemPath_ = Path.Combine(systemPath_, @"..\..\bin\package\20140101.dat");
 #else
             string systemPath_ = HostingEnvironment.MapPath(@"~");
             systemPath_ = Path.Combine(systemPath_, @"bin\20140101.dat");
