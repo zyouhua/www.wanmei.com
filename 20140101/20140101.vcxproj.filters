@@ -99,6 +99,15 @@
     <ClCompile Include="package\mpq\MpqWriter.cpp">
       <Filter>Package\Mpq</Filter>
     </ClCompile>
+    <ClCompile Include="sqlQuery\SqlFormat\SqlFormat.cpp">
+      <Filter>SqlQuery\SqlFormat</Filter>
+    </ClCompile>
+    <ClCompile Include="sqlQuery\SqlConnection\SqlConnection.cpp">
+      <Filter>SqlQuery\SqlConnection</Filter>
+    </ClCompile>
+    <ClCompile Include="sqlQuery\SqlConnection\SqlSingleton.cpp">
+      <Filter>SqlQuery\SqlConnection</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="bzlib\bzlib.h">
@@ -184,6 +193,36 @@
     </ClInclude>
     <ClInclude Include="package\mpq\MpqWriter.h">
       <Filter>Package\Mpq</Filter>
+    </ClInclude>
+    <ClInclude Include="sqlQuery\SqlFormat\ISqlHeadstream.h">
+      <Filter>SqlQuery\SqlFormat</Filter>
+    </ClInclude>
+    <ClInclude Include="sqlQuery\SqlFormat\ISqlStream.h">
+      <Filter>SqlQuery\SqlFormat</Filter>
+    </ClInclude>
+    <ClInclude Include="sqlQuery\SqlFormat\SqlDeal_.h">
+      <Filter>SqlQuery\SqlFormat</Filter>
+    </ClInclude>
+    <ClInclude Include="sqlQuery\SqlFormat\SqlFieldId_.h">
+      <Filter>SqlQuery\SqlFormat</Filter>
+    </ClInclude>
+    <ClInclude Include="sqlQuery\SqlFormat\SqlFormat.h">
+      <Filter>SqlQuery\SqlFormat</Filter>
+    </ClInclude>
+    <ClInclude Include="sqlQuery\SqlFormat\SqlType_.h">
+      <Filter>SqlQuery\SqlFormat</Filter>
+    </ClInclude>
+    <ClInclude Include="sqlQuery\SqlConnection\SqlConnection.h">
+      <Filter>SqlQuery\SqlConnection</Filter>
+    </ClInclude>
+    <ClInclude Include="sqlQuery\SqlConnection\SqlSingleton.h">
+      <Filter>SqlQuery\SqlConnection</Filter>
+    </ClInclude>
+    <ClInclude Include="sqlQuery\SqlInc.h">
+      <Filter>SqlQuery</Filter>
+    </ClInclude>
+    <ClInclude Include="sqlQuery\SqlInc-.h">
+      <Filter>SqlQuery</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

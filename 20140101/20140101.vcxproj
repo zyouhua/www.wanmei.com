@@ -33,6 +33,9 @@
     <ClCompile Include="package\mpq\MpqReader.cpp" />
     <ClCompile Include="package\mpq\MpqWriter.cpp" />
     <ClCompile Include="package\xml\XmlReader.cpp" />
+    <ClCompile Include="sqlQuery\SqlConnection\SqlConnection.cpp" />
+    <ClCompile Include="sqlQuery\SqlConnection\SqlSingleton.cpp" />
+    <ClCompile Include="sqlQuery\SqlFormat\SqlFormat.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="bzlib\bzlib.h" />
@@ -62,6 +65,16 @@
     <ClInclude Include="rapidxml\rapidxml_iterators.hpp" />
     <ClInclude Include="rapidxml\rapidxml_print.hpp" />
     <ClInclude Include="rapidxml\rapidxml_utils.hpp" />
+    <ClInclude Include="sqlQuery\SqlConnection\SqlConnection.h" />
+    <ClInclude Include="sqlQuery\SqlConnection\SqlSingleton.h" />
+    <ClInclude Include="sqlQuery\SqlFormat\ISqlHeadstream.h" />
+    <ClInclude Include="sqlQuery\SqlFormat\ISqlStream.h" />
+    <ClInclude Include="sqlQuery\SqlFormat\SqlDeal_.h" />
+    <ClInclude Include="sqlQuery\SqlFormat\SqlFieldId_.h" />
+    <ClInclude Include="sqlQuery\SqlFormat\SqlFormat.h" />
+    <ClInclude Include="sqlQuery\SqlFormat\SqlType_.h" />
+    <ClInclude Include="sqlQuery\SqlInc-.h" />
+    <ClInclude Include="sqlQuery\SqlInc.h" />
     <ClInclude Include="SysInc.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
