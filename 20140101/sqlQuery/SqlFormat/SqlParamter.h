@@ -8,9 +8,10 @@ namespace std {
 		__i32 _getIndex();
 
 		SqlParamter(__i32 nIndex, char * nBuf, size_t nSize);
+
 	private:
 		__i32 mIdex;
 	};
-	typedef boost<SqlParamter> SqlParamterPtr;
+	typedef shared_ptr<SqlParamter> SqlParamterPtr;
 
 }

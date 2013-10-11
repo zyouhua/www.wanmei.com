@@ -9,11 +9,11 @@ namespace std {
 		mSqlDealSelect_,
 		mSqlDealInsert_,
 		mSqlDealUpdate_,
-		mSqlDealInsertUpdate_,
-		mSqlDealWhere_,
 		mSqlDealUpdateSelect_,
 		mSqlDealUpdateWhen_,
 		mSqlDealUpdateThen_,
+		mSqlDealInsertUpdate_,
+		mSqlDealWhere_,
 		mSqlDealPrimary_,
 	};
 

@@ -10,6 +10,7 @@ namespace std {
 		mSqlTypeUpdate_,
 		mSqlTypeDelete_,
 		mSqlTypeInsertUpdate_,
+		mSqlTypeInsertUpdateEx_,
 		mSqlTypeUpdateInsert_,
 	};
 

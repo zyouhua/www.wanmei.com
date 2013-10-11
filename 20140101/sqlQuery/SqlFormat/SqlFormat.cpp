@@ -20,6 +20,18 @@ namespace std {
 		{
 			this->_runUpdate(nValue, nName);
 		}
+		else if (mSqlDealUpdateSelect_ == mSqlDeal)
+		{
+			this->_runUpdateSelect(nValue, nName);
+		}
+		else if (mSqlDealUpdateWhen_ == mSqlDeal)
+		{
+			this->_runUpdateWhen(nValue, nName);
+		}
+		else if (mSqlDealUpdateThen_ == mSqlDeal)
+		{
+			this->_runUpdateThen(nValue, nName);
+		}
 		else if (mSqlDealInsertUpdate_ == mSqlDeal)
 		{
 			this->_runInsertUpdate(nValue, nName);
@@ -54,6 +66,18 @@ namespace std {
 		else if (mSqlDealUpdate_ == mSqlDeal)
 		{
 			this->_runUpdate(nValue, nName);
+		}
+		else if (mSqlDealUpdateSelect_ == mSqlDeal)
+		{
+			this->_runUpdateSelect(nValue, nName);
+		}
+		else if (mSqlDealUpdateWhen_ == mSqlDeal)
+		{
+			this->_runUpdateWhen(nValue, nName);
+		}
+		else if (mSqlDealUpdateThen_ == mSqlDeal)
+		{
+			this->_runUpdateThen(nValue, nName);
 		}
 		else if (mSqlDealInsertUpdate_ == mSqlDeal)
 		{
@@ -105,6 +129,18 @@ namespace std {
 		{
 			this->_runUpdate(nValue, nName);
 		}
+		else if (mSqlDealUpdateSelect_ == mSqlDeal)
+		{
+			this->_runUpdateSelect(nValue, nName);
+		}
+		else if (mSqlDealUpdateWhen_ == mSqlDeal)
+		{
+			this->_runUpdateWhen(nValue, nName);
+		}
+		else if (mSqlDealUpdateThen_ == mSqlDeal)
+		{
+			this->_runUpdateThen(nValue, nName);
+		}
 		else if (mSqlDealWhere_ == mSqlDeal)
 		{
 			this->_runWhere(nValue, nName);
@@ -151,6 +187,18 @@ namespace std {
 		{
 			this->_runUpdate(nValue, nName);
 		}
+		else if (mSqlDealUpdateSelect_ == mSqlDeal)
+		{
+			this->_runUpdateSelect(nValue, nName);
+		}
+		else if (mSqlDealUpdateWhen_ == mSqlDeal)
+		{
+			this->_runUpdateWhen(nValue, nName);
+		}
+		else if (mSqlDealUpdateThen_ == mSqlDeal)
+		{
+			this->_runUpdateThen(nValue, nName);
+		}
 		else if (mSqlDealWhere_ == mSqlDeal)
 		{
 			this->_runWhere(nValue, nName);
@@ -192,6 +240,18 @@ namespace std {
 		else if (mSqlDealUpdate_ == mSqlDeal)
 		{
 			this->_runUpdate(nValue, nName);
+		}
+		else if (mSqlDealUpdateSelect_ == mSqlDeal)
+		{
+			this->_runUpdateSelect(nValue, nName);
+		}
+		else if (mSqlDealUpdateWhen_ == mSqlDeal)
+		{
+			this->_runUpdateWhen(nValue, nName);
+		}
+		else if (mSqlDealUpdateThen_ == mSqlDeal)
+		{
+			this->_runUpdateThen(nValue, nName);
 		}
 		else if (mSqlDealInsertUpdate_ == mSqlDeal)
 		{
@@ -238,6 +298,18 @@ namespace std {
 		else if (mSqlDealUpdate_ == mSqlDeal)
 		{
 			this->_runUpdate(nValue, nName);
+		}
+		else if (mSqlDealUpdateSelect_ == mSqlDeal)
+		{
+			this->_runUpdateSelect(nValue, nName);
+		}
+		else if (mSqlDealUpdateWhen_ == mSqlDeal)
+		{
+			this->_runUpdateWhen(nValue, nName);
+		}
+		else if (mSqlDealUpdateThen_ == mSqlDeal)
+		{
+			this->_runUpdateThen(nValue, nName);
 		}
 		else if (mSqlDealInsertUpdate_ == mSqlDeal)
 		{
@@ -289,6 +361,18 @@ namespace std {
 		{
 			this->_runUpdate(nValue, nName);
 		}
+		else if (mSqlDealUpdateSelect_ == mSqlDeal)
+		{
+			this->_runUpdateSelect(nValue, nName);
+		}
+		else if (mSqlDealUpdateWhen_ == mSqlDeal)
+		{
+			this->_runUpdateWhen(nValue, nName);
+		}
+		else if (mSqlDealUpdateThen_ == mSqlDeal)
+		{
+			this->_runUpdateThen(nValue, nName);
+		}
 		else if (mSqlDealWhere_ == mSqlDeal)
 		{
 			this->_runWhere(nValue, nName);
@@ -330,6 +414,18 @@ namespace std {
 		else if (mSqlDealUpdate_ == mSqlDeal)
 		{
 			this->_runUpdate(nValue, nName);
+		}
+		else if (mSqlDealUpdateSelect_ == mSqlDeal)
+		{
+			this->_runUpdateSelect(nValue, nName);
+		}
+		else if (mSqlDealUpdateWhen_ == mSqlDeal)
+		{
+			this->_runUpdateWhen(nValue, nName);
+		}
+		else if (mSqlDealUpdateThen_ == mSqlDeal)
+		{
+			this->_runUpdateThen(nValue, nName);
 		}
 		else if (mSqlDealInsertUpdate_ == mSqlDeal)
 		{
@@ -377,6 +473,18 @@ namespace std {
 		{
 			this->_runUpdate(nValue, nName);
 		}
+		else if (mSqlDealUpdateSelect_ == mSqlDeal)
+		{
+			this->_runUpdateSelect(nValue, nName);
+		}
+		else if (mSqlDealUpdateWhen_ == mSqlDeal)
+		{
+			this->_runUpdateWhen(nValue, nName);
+		}
+		else if (mSqlDealUpdateThen_ == mSqlDeal)
+		{
+			this->_runUpdateThen(nValue, nName);
+		}
 		else if (mSqlDealInsertUpdate_ == mSqlDeal)
 		{
 			this->_runInsertUpdate(nValue, nName);
@@ -422,6 +530,18 @@ namespace std {
 		else if (mSqlDealUpdate_ == mSqlDeal)
 		{
 			this->_runUpdate(nValue, nName);
+		}
+		else if (mSqlDealUpdateSelect_ == mSqlDeal)
+		{
+			this->_runUpdateSelect(nValue, nName);
+		}
+		else if (mSqlDealUpdateWhen_ == mSqlDeal)
+		{
+			this->_runUpdateWhen(nValue, nName);
+		}
+		else if (mSqlDealUpdateThen_ == mSqlDeal)
+		{
+			this->_runUpdateThen(nValue, nName);
 		}
 		else if (mSqlDealInsertUpdate_ == mSqlDeal)
 		{
@@ -469,6 +589,18 @@ namespace std {
 		{
 			this->_runUpdate(nValue, nName);
 		}
+		else if (mSqlDealUpdateSelect_ == mSqlDeal)
+		{
+			this->_runUpdateSelect(nValue, nName);
+		}
+		else if (mSqlDealUpdateWhen_ == mSqlDeal)
+		{
+			this->_runUpdateWhen(nValue, nName);
+		}
+		else if (mSqlDealUpdateThen_ == mSqlDeal)
+		{
+			this->_runUpdateThen(nValue, nName);
+		}
 		else if (mSqlDealInsertUpdate_ == mSqlDeal)
 		{
 			this->_runInsertUpdate(nValue, nName);
@@ -514,6 +646,18 @@ namespace std {
 		else if (mSqlDealUpdate_ == mSqlDeal)
 		{
 			this->_runUpdate(nValue, nName);
+		}
+		else if (mSqlDealUpdateSelect_ == mSqlDeal)
+		{
+			this->_runUpdateSelect(nValue, nName);
+		}
+		else if (mSqlDealUpdateWhen_ == mSqlDeal)
+		{
+			this->_runUpdateWhen(nValue, nName);
+		}
+		else if (mSqlDealUpdateThen_ == mSqlDeal)
+		{
+			this->_runUpdateThen(nValue, nName);
 		}
 		else if (mSqlDealInsertUpdate_ == mSqlDeal)
 		{
@@ -561,6 +705,18 @@ namespace std {
 		{
 			this->_runUpdate(nValue, nName);
 		}
+		else if (mSqlDealUpdateSelect_ == mSqlDeal)
+		{
+			this->_runUpdateSelect(nValue, nName);
+		}
+		else if (mSqlDealUpdateWhen_ == mSqlDeal)
+		{
+			this->_runUpdateWhen(nValue, nName);
+		}
+		else if (mSqlDealUpdateThen_ == mSqlDeal)
+		{
+			this->_runUpdateThen(nValue, nName);
+		}
 		else if (mSqlDealInsertUpdate_ == mSqlDeal)
 		{
 			this->_runInsertUpdate(nValue, nName);
@@ -594,6 +750,11 @@ namespace std {
 		return mValue;
 	}
 
+	bool SqlFormat::_sqlParamter()
+	{
+		return (mSqlParamter.size() > 0);
+	}
+
 	void SqlFormat::_runInsert(string& nValue, const char * nName)
 	{
 		if (false == mBeg)
@@ -625,6 +786,24 @@ namespace std {
 		if (mBeg)
 		{
 			mBeg = false;
+		}
+	}
+
+	void SqlFormat::_runUpdateWhen(string& nValue, const char * nName)
+	{
+		mValue += mValueCharacter;
+		mValue += nValue;
+		mValue += mValueCharacter;
+		mValue += " ";
+	}
+
+	void SqlFormat::_runUpdateThen(string& nValue, const char * nName)
+	{
+		if (mName == nName)
+		{
+			mValue += mValueCharacter;
+			mValue += nValue;
+			mValue += mValueCharacter;
 		}
 	}
 
@@ -676,7 +855,6 @@ namespace std {
 		mBeg = false;
 		mEnd = false;
 	}
-
 
 	string SqlFormat::mValueCharacter = "'";
 	string SqlFormat::mFieldCharacter = "`";

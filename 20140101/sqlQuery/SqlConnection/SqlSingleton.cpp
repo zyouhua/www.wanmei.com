@@ -5,7 +5,7 @@ namespace std {
 	void SqlSingleton::_runSql(SqlFormat& nSqlFormat)
 	{
 		SqlConnectionPtr& sqlConnection = this->_getConnection();
-		sqlConnection->_runSql(nSqlFormat._sqlCommand());
+		sqlConnection->_runSql(nSqlFormat);
 	}
 
 	SqlConnectionPtr SqlSingleton::_getConnection()

@@ -60,6 +60,8 @@ namespace std {
 
 		const string& _sqlCommand();
 
+		bool _sqlParamter();
+
 		template<class __t>
 		void _serialize(list<__t>& nValue, const char * nName);
 
@@ -88,6 +90,19 @@ namespace std {
 		void _runUpdate(__t& nValue, const char * nName);
 
 		void _runUpdate(string& nValue, const char * nName);
+
+		template <typename __t>
+		void _runUpdateSelect(__t& nValue, const char * nName);
+		
+		template <typename __t>
+		void _runUpdateWhen(__t& nValue, const char * nName);
+
+		void _runUpdateWhen(string& nValue, const char * nName);
+
+		template <typename __t>
+		void _runUpdateThen(__t& nValue, const char * nName);
+
+		void _runUpdateThen(string& nValue, const char * nName);
 
 		template <typename __t>
 		void _runInsertUpdate(list<__t>& nValue, const char * nName);
@@ -135,6 +150,7 @@ namespace std {
 		~SqlFormat();
 
 	private:
+		friend class SqlConnection;
 		list<SqlParamterPtr> mSqlParamter;
 		list<string> mUpdate;
 		SqlDeal_ mSqlDeal;
@@ -361,6 +377,32 @@ namespace std {
 	}
 
 	template <typename __t>
+	void SqlFormat::_runUpdateSelect(__t& nValue, const char * nName)
+	{
+		mUpdate.push_back(nName);
+	}
+
+	template <typename __t>
+	void SqlFormat::_runUpdateWhen(__t& nValue, const char * nName)
+	{
+		mValue += mValueCharacter;
+		mValue += _convert<string, __t>(nValue);
+		mValue += mValueCharacter;
+		mValue += " ";
+	}
+
+	template <typename __t>
+	void SqlFormat::_runUpdateThen(__t& nValue, const char * nName)
+	{
+		if (mName == nName)
+		{
+			mValue += mValueCharacter;
+			mValue += _convert<string, __t>(nValue);
+			mValue += mValueCharacter;
+		}
+	}
+
+	template <typename __t>
 	void SqlFormat::_runInsertUpdate(list<__t>& nValue, const char * nName)
 	{
 		mValue += "ON DUPLICATE KEY UPDATE ";
@@ -411,7 +453,7 @@ namespace std {
 			mValue += mValueCharacter;
 			temp = true;
 		}
-		mValue += L") ";
+		mValue += ") ";
 	}
 
 	template <typename __t>
@@ -468,6 +510,10 @@ namespace std {
 		else if (mSqlTypeInsertUpdate_ == sqlType_)
 		{
 			this->_runInsertUpdate(nSqlHeadstream);
+		}
+		else if (mSqlTypeInsertUpdateEx_ == sqlType_)
+		{
+			this._runInsertUpdateEx(nSqlHeadstream);
 		}
 		else if (mSqlTypeDelete_ == sqlType_)
 		{

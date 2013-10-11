@@ -8,9 +8,10 @@ namespace std {
 	{
 	public:
 		SqlResultPtr _runQuery(const string& nSql);
+		void _runUpdate(SqlFormat& nSqlFormat);
 		void _runSql(const string& nSql);
 
-		SqlConnection(SqlSingleton& nSqlSingleton);
+		SqlConnection(SqlSingleton * nSqlSingleton);
 		~SqlConnection();
 	private:
 		sql::Connection * mConnection;
