@@ -1,4 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <sqlSingleton hostName="tcp://127.0.0.1:3306"
               userName="root"
-              passward="zyouhua"/>
+              passward="zyouhua"
+              schema="wanmei"/>

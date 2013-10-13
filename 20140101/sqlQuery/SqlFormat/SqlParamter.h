@@ -2,7 +2,7 @@
 
 namespace std {
 
-	class SqlParamter
+	class SqlParamter : public noncopyable
 	{
 	public:
 		virtual void _runStatement(sql::PreparedStatement * nStatement) = 0;

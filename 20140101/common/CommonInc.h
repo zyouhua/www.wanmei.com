@@ -9,3 +9,4 @@
 #include "CompressSingleton.h"
 #include "HashSingleton.h"
 #include "LogSingleton.h"
+#include "DeviceService.h"

@@ -2,7 +2,7 @@
 
 namespace std {
 
-	class PropertySink
+	class PropertySink : public noncopyable
 	{
 	public:
 		void _runCreate(PropertyMgrPtr& nPropertyMgr);

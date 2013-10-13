@@ -2,7 +2,7 @@
 
 namespace std {
 
-	class SqlFormat
+	class SqlFormat : public noncopyable
 	{
 	public:
 		void _serialize(bool& nValue, const char * nName, unsigned short nSqlFieldId = mSqlFieldIdNone_);

@@ -132,6 +132,24 @@
     <ClCompile Include="Main.cpp">
       <Filter>Include</Filter>
     </ClCompile>
+    <ClCompile Include="account\AccountService.cpp">
+      <Filter>Account</Filter>
+    </ClCompile>
+    <ClCompile Include="common\CommonMain.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="sqlQuery\SqlMain.cpp">
+      <Filter>SqlQuery</Filter>
+    </ClCompile>
+    <ClCompile Include="package\PackageMain.cpp">
+      <Filter>Package</Filter>
+    </ClCompile>
+    <ClCompile Include="account\AccountMain.cpp">
+      <Filter>Account</Filter>
+    </ClCompile>
+    <ClCompile Include="common\DeviceService.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="bzlib\bzlib.h">
@@ -277,6 +295,30 @@
     </ClInclude>
     <ClInclude Include="Main.h">
       <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="account\AccountService.h">
+      <Filter>Account</Filter>
+    </ClInclude>
+    <ClInclude Include="account\AccountInc.h">
+      <Filter>Account</Filter>
+    </ClInclude>
+    <ClInclude Include="account\AccountInc-.h">
+      <Filter>Account</Filter>
+    </ClInclude>
+    <ClInclude Include="common\CommonMain.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="sqlQuery\SqlMain.h">
+      <Filter>SqlQuery</Filter>
+    </ClInclude>
+    <ClInclude Include="package\PackageMain.h">
+      <Filter>Package</Filter>
+    </ClInclude>
+    <ClInclude Include="account\AccountMain.h">
+      <Filter>Account</Filter>
+    </ClInclude>
+    <ClInclude Include="common\DeviceService.h">
+      <Filter>Common</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

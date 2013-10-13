@@ -2,7 +2,7 @@
 
 namespace std {
 
-	class SqlSingleton
+	class SqlSingleton : public noncopyable
 	{
 	public:
 		template<class __t>
@@ -10,13 +10,15 @@ namespace std {
 		void _runUpdate(SqlFormat& nSqlFormat);
 		void _runSql(string& nSql);
 		SqlConnectionPtr _getConnection();
-		void _runInit();
 
 	public:
-		const wchar_t * _streamName();
+		const char * _streamName();
+		void _runInit();
 
 	private:
 		SqlConnectionPtr _createSqlConnection();
+		void _initConfig();
+		void _initDriver();
 
 		template<class __t>
 		void _serialize(__t * nT);
@@ -33,6 +35,9 @@ namespace std {
 		string mUserName;
 		string mPassward;
 		string mSchema;
+
+	private:
+		static const char * mSqlConfig;
 	};
 
 	template<class __t>
@@ -41,6 +46,7 @@ namespace std {
 		nT->_serialize(mHostName, "hostName");
 		nT->_serialize(mUserName, "userName");
 		nT->_serialize(mPassward, "passward");
+		nT->_serialize(mSchema, "schema");
 	}
 
 	template<class __t>

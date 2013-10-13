@@ -10,3 +10,4 @@
 #include <stdexcept>
 #include <exception>
 #include <streambuf>
+#include <set>

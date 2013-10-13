@@ -4,7 +4,7 @@ namespace std {
 
 	class SqlSingleton;
 
-	class SqlConnection
+	class SqlConnection : public noncopyable
 	{
 	public:
 		SqlResultPtr _runQuery(const string& nSql);

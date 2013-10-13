@@ -4,7 +4,7 @@ namespace std {
 
 	class IPropertyId;
 	typedef shared_ptr<IPropertyId> PropertyIdPtr;
-	class PropertyMgr
+	class PropertyMgr : public noncopyable
 	{
 	public:
 		PropertyPtr& _getProperty(IPropertyId& nPropertyId);

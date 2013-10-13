@@ -15,6 +15,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="account\AccountMain.cpp" />
+    <ClCompile Include="account\AccountService.cpp" />
     <ClCompile Include="bzlib\blocksort.c" />
     <ClCompile Include="bzlib\bzlib.c" />
     <ClCompile Include="bzlib\compress.c" />
@@ -22,7 +24,9 @@
     <ClCompile Include="bzlib\decompress.c" />
     <ClCompile Include="bzlib\huffman.c" />
     <ClCompile Include="bzlib\randtable.c" />
+    <ClCompile Include="common\CommonMain.cpp" />
     <ClCompile Include="common\CompressSingleton.cpp" />
+    <ClCompile Include="common\DeviceService.cpp" />
     <ClCompile Include="common\HashSingleton.cpp" />
     <ClCompile Include="common\LogSingleton.cpp" />
     <ClCompile Include="Main.cpp" />
@@ -33,6 +37,7 @@
     <ClCompile Include="package\mpq\MpqHead.cpp" />
     <ClCompile Include="package\mpq\MpqReader.cpp" />
     <ClCompile Include="package\mpq\MpqWriter.cpp" />
+    <ClCompile Include="package\PackageMain.cpp" />
     <ClCompile Include="package\xml\XmlReader.cpp" />
     <ClCompile Include="property\Property.cpp" />
     <ClCompile Include="property\PropertyMgr.cpp" />
@@ -44,14 +49,21 @@
     <ClCompile Include="sqlQuery\SqlFormat\SqlParamter.cpp" />
     <ClCompile Include="sqlQuery\SqlFormat\SqlFormat.cpp" />
     <ClCompile Include="sqlQuery\SqlFormat\StringSqlParamter.cpp" />
+    <ClCompile Include="sqlQuery\SqlMain.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="account\AccountInc-.h" />
+    <ClInclude Include="account\AccountInc.h" />
+    <ClInclude Include="account\AccountMain.h" />
+    <ClInclude Include="account\AccountService.h" />
     <ClInclude Include="bzlib\bzlib.h" />
     <ClInclude Include="bzlib\bzlib_private.h" />
     <ClInclude Include="common\Common.h" />
     <ClInclude Include="common\CommonInc.h" />
+    <ClInclude Include="common\CommonMain.h" />
     <ClInclude Include="common\CompressSingleton.h" />
     <ClInclude Include="common\crypt_buf.h" />
+    <ClInclude Include="common\DeviceService.h" />
     <ClInclude Include="common\HashSingleton.h" />
     <ClInclude Include="common\CommonInc-.h" />
     <ClInclude Include="common\LogSingleton.h" />
@@ -69,6 +81,7 @@
     <ClInclude Include="package\mpq\MpqWriter.h" />
     <ClInclude Include="package\PackageInc-.h" />
     <ClInclude Include="package\PackageInc.h" />
+    <ClInclude Include="package\PackageMain.h" />
     <ClInclude Include="package\xml\XmlReader.h" />
     <ClInclude Include="property\IProtertyId.h" />
     <ClInclude Include="property\Property.h" />
@@ -93,6 +106,7 @@
     <ClInclude Include="sqlQuery\SqlFormat\StringSqlParamter.h" />
     <ClInclude Include="sqlQuery\SqlInc-.h" />
     <ClInclude Include="sqlQuery\SqlInc.h" />
+    <ClInclude Include="sqlQuery\SqlMain.h" />
     <ClInclude Include="SysInc.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
@@ -142,14 +156,14 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>CPPCONN_PUBLIC_FUNC=;APIEXPORT;WIN32;_DEBUG;_WINDOWS;_USRDLL;MY20140101_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>../include/;../include/mysql/;../include/mysqlcppconn/</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../include/;../include/mysqlcppconn/</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4996;4819</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>../library/debug/</AdditionalLibraryDirectories>
-      <AdditionalDependencies>libmysql.lib;mysqlclient.lib;mysqlcppconn-static.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>libmysql.lib;mysqlcppconn-static.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -161,8 +175,8 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>CPPCONN_PUBLIC_FUNC=;APIEXPORT;WIN32;NDEBUG;_WINDOWS;_USRDLL;MY20140101_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>../include/;../include/mysql/;../include/mysqlcppconn/</AdditionalIncludeDirectories>
-      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
+      <AdditionalIncludeDirectories>../include/;../include/mysqlcppconn/</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4996;4819</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -170,7 +184,7 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <AdditionalLibraryDirectories>../library/release/</AdditionalLibraryDirectories>
-      <AdditionalDependencies>libmysql.lib;mysqlclient.lib;mysqlcppconn-static.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>libmysql.lib;mysqlcppconn-static.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

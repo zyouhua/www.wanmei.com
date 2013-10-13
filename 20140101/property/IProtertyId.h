@@ -2,7 +2,7 @@
 
 namespace std {
 
-	class IPropertyId
+	class IPropertyId : public noncopyable
 	{
 	public:
 		virtual PropertyPtr _createProperty(PropertyMgrPtr& nPropertyMgr) = 0;

@@ -4,7 +4,7 @@ namespace std {
 
 	class PropertyMgr;
 	typedef shared_ptr<PropertyMgr> PropertyMgrPtr;
-	class Property
+	class Property : public noncopyable
 	{
 	public:
 		virtual void _runInit();

@@ -4,8 +4,6 @@
   <package>
     <__t name="mpq://www.wanmei.com/account\account.ui"
          value="account.ui.dll"/>
-    <__t name="20140101"
-         value="pluginUrls.xml"/>
   </package>
 
 </packages>

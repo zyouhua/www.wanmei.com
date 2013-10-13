@@ -1394,7 +1394,7 @@ namespace rapidxml
             {
                 // Skip whitespace before node
                 skip<whitespace_pred, Flags>(text);
-                if (*text == 0)
+                if ( (*text == 0) || (*text == -3) )
                     break;
 
                 // Parse and append new child
@@ -1404,8 +1404,10 @@ namespace rapidxml
                     if (xml_node<Ch> *node = parse_node<Flags>(text))
                         this->append_node(node);
                 }
-                else
-                    RAPIDXML_PARSE_ERROR("expected <", text);
+				else
+				{
+					RAPIDXML_PARSE_ERROR("expected <", text);
+				}
             }
 
         }

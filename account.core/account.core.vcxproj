@@ -34,6 +34,7 @@
   </PropertyGroup>
   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='command|Win32'">
     <PlatformToolset>v110</PlatformToolset>
+    <ConfigurationType>Utility</ConfigurationType>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -87,11 +88,23 @@ copy *.xml $(SolutionDir)..\bin\home\www.wanmei.com\account\$account.core\*.xml
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <None Include="..\20140101\account\AccountInc-.h" />
     <None Include="Account.sql" />
   </ItemGroup>
   <ItemGroup>
-    <Xml Include="accountConfig.xml" />
+    <Xml Include="accountService.xml" />
+    <Xml Include="packages.xml" />
+    <Xml Include="pluginUrls.xml" />
     <Xml Include="sqlConfig.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\20140101\account\AccountMain.cpp" />
+    <ClCompile Include="..\20140101\account\AccountService.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\20140101\account\AccountInc.h" />
+    <ClInclude Include="..\20140101\account\AccountMain.h" />
+    <ClInclude Include="..\20140101\account\AccountService.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

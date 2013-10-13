@@ -60,6 +60,8 @@ namespace package
             string name_ = nPackage._getName();
             string value_ = nPackage._getValue();
             string path_ = Path.Combine(nPath, value_);
+            Console.WriteLine(name_);
+            Console.WriteLine(value_);
             m10000002(path_, name_);
         }
 

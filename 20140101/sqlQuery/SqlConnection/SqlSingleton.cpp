@@ -25,12 +25,26 @@ namespace std {
 		return sqlConnection;
 	}
 
-	const wchar_t * SqlSingleton::_streamName()
+	const char * SqlSingleton::_streamName()
 	{
-		return L"sqlSingleton";
+		return "sqlSingleton";
 	}
 
 	void SqlSingleton::_runInit()
+	{
+		this->_initConfig();
+		this->_initDriver();
+	}
+
+	void SqlSingleton::_initConfig()
+	{
+		XmlReader xmlReader_;
+		xmlReader_._openUrl(mSqlConfig);
+		xmlReader_._selectStream(_streamName());
+		this->_serialize(&xmlReader_);
+	}
+
+	void SqlSingleton::_initDriver()
 	{
 		try
 		{
@@ -59,5 +73,7 @@ namespace std {
 		mConnections.clear();
 		mDriver = nullptr;
 	}
+
+	const char * SqlSingleton::mSqlConfig = "mpq://www.wanmei.com/account\\account.core*sqlConfig.xml";
 
 }

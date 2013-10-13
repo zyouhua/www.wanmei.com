@@ -2,7 +2,7 @@
 
 namespace std {
 
-	class SqlResult
+	class SqlResult : public noncopyable
 	{
 	public:
 		bool _runNext();

@@ -10,24 +10,50 @@
     <Filter Include="Account">
       <UniqueIdentifier>{2f959bb2-b697-4579-8d31-02bcbd23e6a7}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Account\Config">
-      <UniqueIdentifier>{1bdf3005-6832-404c-9764-4d642a128c0f}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Account\AccountSql">
       <UniqueIdentifier>{54c09520-3946-493e-9e71-2d26b0f571b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Account\AccountService">
+      <UniqueIdentifier>{701325e5-4d15-4cd7-8b56-c4a1920e24e2}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="Account.sql">
       <Filter>SqlScript</Filter>
     </None>
+    <None Include="..\20140101\account\AccountInc-.h">
+      <Filter>Account</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <Xml Include="accountConfig.xml">
-      <Filter>Config</Filter>
-    </Xml>
     <Xml Include="sqlConfig.xml">
       <Filter>Config</Filter>
     </Xml>
+    <Xml Include="packages.xml" />
+    <Xml Include="pluginUrls.xml">
+      <Filter>Config</Filter>
+    </Xml>
+    <Xml Include="accountService.xml">
+      <Filter>Config</Filter>
+    </Xml>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\20140101\account\AccountService.cpp">
+      <Filter>Account\AccountService</Filter>
+    </ClCompile>
+    <ClCompile Include="..\20140101\account\AccountMain.cpp">
+      <Filter>Account</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\20140101\account\AccountService.h">
+      <Filter>Account\AccountService</Filter>
+    </ClInclude>
+    <ClInclude Include="..\20140101\account\AccountInc.h">
+      <Filter>Account</Filter>
+    </ClInclude>
+    <ClInclude Include="..\20140101\account\AccountMain.h">
+      <Filter>Account</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
