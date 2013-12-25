@@ -20,7 +20,16 @@ namespace std {
 
 	void SqlSingleton::_runInit()
 	{
-		mDriver = mysql::get_mysql_driver_instance();
+		try
+		{
+			mDriver = mysql::get_mysql_driver_instance();
+		}
+		catch (SQLException& e)
+		{
+		}
+		catch (runtime_error& e)
+		{
+		}
 	}
 
 	SqlSingleton::SqlSingleton()

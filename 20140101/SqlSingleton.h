@@ -12,10 +12,10 @@ namespace std {
 		const wchar_t * _streamName();
 
 	private:
+		SqlConnectionPtr _createSqlConnection();
+
 		template<class __t>
 		void _serialize(__t * nT);
-
-		SqlConnectionPtr _createSqlConnection();
 
 	public:
 		SqlSingleton();

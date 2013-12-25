@@ -6,3 +6,5 @@
 #include <map>
 #include <fstream>
 #include <locale>
+#include <stdexcept>
+#include <exception>
