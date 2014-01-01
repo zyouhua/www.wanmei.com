@@ -29,27 +29,5 @@
     <Xml Include="sqlConfig.xml">
       <Filter>Config</Filter>
     </Xml>
-    <Xml Include="..\20140101\packages.xml">
-      <Filter>Config</Filter>
-    </Xml>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\20140101\AccountConfig.cpp">
-      <Filter>Account\Config</Filter>
-    </ClCompile>
-    <ClCompile Include="..\20140101\AccountLoginB.cpp">
-      <Filter>Account\AccountSql</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\20140101\AccountConfig.h">
-      <Filter>Account\Config</Filter>
-    </ClInclude>
-    <ClInclude Include="..\20140101\AccountInc.h">
-      <Filter>Account</Filter>
-    </ClInclude>
-    <ClInclude Include="..\20140101\AccountLoginB.h">
-      <Filter>Account\AccountSql</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>

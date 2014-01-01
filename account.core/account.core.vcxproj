@@ -90,18 +90,8 @@ copy *.xml $(SolutionDir)..\bin\home\www.wanmei.com\account\$account.core\*.xml
     <None Include="Account.sql" />
   </ItemGroup>
   <ItemGroup>
-    <Xml Include="..\20140101\packages.xml" />
     <Xml Include="accountConfig.xml" />
     <Xml Include="sqlConfig.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\20140101\AccountConfig.cpp" />
-    <ClCompile Include="..\20140101\AccountLoginB.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\20140101\AccountConfig.h" />
-    <ClInclude Include="..\20140101\AccountInc.h" />
-    <ClInclude Include="..\20140101\AccountLoginB.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
