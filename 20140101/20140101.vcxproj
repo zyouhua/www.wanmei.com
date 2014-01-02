@@ -14,6 +14,56 @@
       <Platform>Win32</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="bzlib\blocksort.c" />
+    <ClCompile Include="bzlib\bzlib.c" />
+    <ClCompile Include="bzlib\compress.c" />
+    <ClCompile Include="bzlib\crctable.c" />
+    <ClCompile Include="bzlib\decompress.c" />
+    <ClCompile Include="bzlib\huffman.c" />
+    <ClCompile Include="bzlib\randtable.c" />
+    <ClCompile Include="common\CompressSingleton.cpp" />
+    <ClCompile Include="common\HashSingleton.cpp" />
+    <ClCompile Include="common\LogSingleton.cpp" />
+    <ClCompile Include="package\bin\BinReader.cpp" />
+    <ClCompile Include="package\bin\BinWriter.cpp" />
+    <ClCompile Include="package\mpq\MpqExport.cpp" />
+    <ClCompile Include="package\mpq\MpqHash.cpp" />
+    <ClCompile Include="package\mpq\MpqHead.cpp" />
+    <ClCompile Include="package\mpq\MpqReader.cpp" />
+    <ClCompile Include="package\mpq\MpqWriter.cpp" />
+    <ClCompile Include="package\xml\XmlReader.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="bzlib\bzlib.h" />
+    <ClInclude Include="bzlib\bzlib_private.h" />
+    <ClInclude Include="common\Common.h" />
+    <ClInclude Include="common\CommonInc.h" />
+    <ClInclude Include="common\CompressSingleton.h" />
+    <ClInclude Include="common\crypt_buf.h" />
+    <ClInclude Include="common\HashSingleton.h" />
+    <ClInclude Include="common\CommonInc-.h" />
+    <ClInclude Include="common\LogSingleton.h" />
+    <ClInclude Include="common\_convert.h" />
+    <ClInclude Include="common\__singleton.h" />
+    <ClInclude Include="Include.h" />
+    <ClInclude Include="Library.h" />
+    <ClInclude Include="package\bin\BinReader.h" />
+    <ClInclude Include="package\bin\BinWriter.h" />
+    <ClInclude Include="package\mpq\MpqExport.h" />
+    <ClInclude Include="package\mpq\MpqHash.h" />
+    <ClInclude Include="package\mpq\MpqHead.h" />
+    <ClInclude Include="package\mpq\MpqReader.h" />
+    <ClInclude Include="package\mpq\MpqWriter.h" />
+    <ClInclude Include="package\PackageInc-.h" />
+    <ClInclude Include="package\PackageInc.h" />
+    <ClInclude Include="package\xml\XmlReader.h" />
+    <ClInclude Include="rapidxml\rapidxml.hpp" />
+    <ClInclude Include="rapidxml\rapidxml_iterators.hpp" />
+    <ClInclude Include="rapidxml\rapidxml_print.hpp" />
+    <ClInclude Include="rapidxml\rapidxml_utils.hpp" />
+    <ClInclude Include="SysInc.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{9B5076F6-1769-4EDD-A5BF-F58E0B9189E8}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>

@@ -44,4 +44,146 @@
       <UniqueIdentifier>{9e36b632-cb3b-492f-b182-9b39dae85128}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="bzlib\blocksort.c">
+      <Filter>Library\Bzlib</Filter>
+    </ClCompile>
+    <ClCompile Include="bzlib\bzlib.c">
+      <Filter>Library\Bzlib</Filter>
+    </ClCompile>
+    <ClCompile Include="bzlib\compress.c">
+      <Filter>Library\Bzlib</Filter>
+    </ClCompile>
+    <ClCompile Include="bzlib\crctable.c">
+      <Filter>Library\Bzlib</Filter>
+    </ClCompile>
+    <ClCompile Include="bzlib\decompress.c">
+      <Filter>Library\Bzlib</Filter>
+    </ClCompile>
+    <ClCompile Include="bzlib\huffman.c">
+      <Filter>Library\Bzlib</Filter>
+    </ClCompile>
+    <ClCompile Include="bzlib\randtable.c">
+      <Filter>Library\Bzlib</Filter>
+    </ClCompile>
+    <ClCompile Include="common\CompressSingleton.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\HashSingleton.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\LogSingleton.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="package\bin\BinReader.cpp">
+      <Filter>Package\Bin</Filter>
+    </ClCompile>
+    <ClCompile Include="package\bin\BinWriter.cpp">
+      <Filter>Package\Bin</Filter>
+    </ClCompile>
+    <ClCompile Include="package\xml\XmlReader.cpp">
+      <Filter>Package\Xml</Filter>
+    </ClCompile>
+    <ClCompile Include="package\mpq\MpqExport.cpp">
+      <Filter>Package\Mpq</Filter>
+    </ClCompile>
+    <ClCompile Include="package\mpq\MpqHash.cpp">
+      <Filter>Package\Mpq</Filter>
+    </ClCompile>
+    <ClCompile Include="package\mpq\MpqHead.cpp">
+      <Filter>Package\Mpq</Filter>
+    </ClCompile>
+    <ClCompile Include="package\mpq\MpqReader.cpp">
+      <Filter>Package\Mpq</Filter>
+    </ClCompile>
+    <ClCompile Include="package\mpq\MpqWriter.cpp">
+      <Filter>Package\Mpq</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="bzlib\bzlib.h">
+      <Filter>Library\Bzlib</Filter>
+    </ClInclude>
+    <ClInclude Include="bzlib\bzlib_private.h">
+      <Filter>Library\Bzlib</Filter>
+    </ClInclude>
+    <ClInclude Include="rapidxml\rapidxml.hpp">
+      <Filter>Library\RapidXml</Filter>
+    </ClInclude>
+    <ClInclude Include="rapidxml\rapidxml_iterators.hpp">
+      <Filter>Library\RapidXml</Filter>
+    </ClInclude>
+    <ClInclude Include="rapidxml\rapidxml_print.hpp">
+      <Filter>Library\RapidXml</Filter>
+    </ClInclude>
+    <ClInclude Include="rapidxml\rapidxml_utils.hpp">
+      <Filter>Library\RapidXml</Filter>
+    </ClInclude>
+    <ClInclude Include="common\__singleton.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\_convert.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\Common.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\CompressSingleton.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\HashSingleton.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\LogSingleton.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\crypt_buf.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Include.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="common\CommonInc-.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\CommonInc.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Library.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="SysInc.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="package\bin\BinReader.h">
+      <Filter>Package\Bin</Filter>
+    </ClInclude>
+    <ClInclude Include="package\bin\BinWriter.h">
+      <Filter>Package\Bin</Filter>
+    </ClInclude>
+    <ClInclude Include="package\xml\XmlReader.h">
+      <Filter>Package\Xml</Filter>
+    </ClInclude>
+    <ClInclude Include="package\PackageInc.h">
+      <Filter>Package</Filter>
+    </ClInclude>
+    <ClInclude Include="package\PackageInc-.h">
+      <Filter>Package</Filter>
+    </ClInclude>
+    <ClInclude Include="package\mpq\MpqExport.h">
+      <Filter>Package\Mpq</Filter>
+    </ClInclude>
+    <ClInclude Include="package\mpq\MpqHash.h">
+      <Filter>Package\Mpq</Filter>
+    </ClInclude>
+    <ClInclude Include="package\mpq\MpqHead.h">
+      <Filter>Package\Mpq</Filter>
+    </ClInclude>
+    <ClInclude Include="package\mpq\MpqReader.h">
+      <Filter>Package\Mpq</Filter>
+    </ClInclude>
+    <ClInclude Include="package\mpq\MpqWriter.h">
+      <Filter>Package\Mpq</Filter>
+    </ClInclude>
+  </ItemGroup>
 </Project>
