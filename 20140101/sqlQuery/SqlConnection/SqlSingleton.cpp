@@ -2,6 +2,12 @@
 
 namespace std {
 
+	void SqlSingleton::_runSql(SqlFormat& nSqlFormat)
+	{
+		SqlConnectionPtr& sqlConnection = this->_getConnection();
+		sqlConnection->_runSql(nSqlFormat._sqlCommand());
+	}
+
 	SqlConnectionPtr SqlSingleton::_getConnection()
 	{
 		return this->_createSqlConnection();
@@ -9,7 +15,7 @@ namespace std {
 
 	SqlConnectionPtr SqlSingleton::_createSqlConnection()
 	{
-		SqlConnectionPtr sqlConnection(new SqlConnection(mDriver));
+		SqlConnectionPtr sqlConnection(new SqlConnection(this));
 		return sqlConnection;
 	}
 

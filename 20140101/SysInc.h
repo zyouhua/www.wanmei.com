@@ -9,3 +9,4 @@
 #include <locale>
 #include <stdexcept>
 #include <exception>
+#include <streambuf>

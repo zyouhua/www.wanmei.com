@@ -2,11 +2,11 @@
 
 namespace std {
 
-	void SqlFormat::_serialize(bool& nValue, const wchar_t * nName, unsigned short nSqlFieldId)
+	void SqlFormat::_serialize(bool& nValue, const char * nName, unsigned short nSqlFieldId)
 	{
 		if (mSqlDealCreate_ == mSqlDeal)
 		{
-			this->_runCreate(nValue, nName, L"TINYINT(1)", nSqlFieldId);
+			this->_runCreate(nValue, nName, "TINYINT(1)", nSqlFieldId);
 		}
 		else if (mSqlDealSelect_ == mSqlDeal)
 		{
@@ -37,11 +37,11 @@ namespace std {
 		}
 	}
 
-	void SqlFormat::_serialize(char& nValue, const wchar_t * nName, unsigned short nSqlFieldId)
+	void SqlFormat::_serialize(char& nValue, const char * nName, unsigned short nSqlFieldId)
 	{
 		if (mSqlDealCreate_ == mSqlDeal)
 		{
-			this->_runCreate(nValue, nName, L"INT(10)", nSqlFieldId);
+			this->_runCreate(nValue, nName, "INT(10)", nSqlFieldId);
 		}
 		else if (mSqlDealSelect_ == mSqlDeal)
 		{
@@ -72,7 +72,7 @@ namespace std {
 		}
 	}
 
-	void SqlFormat::_serialize(list<char>& nValue, const wchar_t * nName)
+	void SqlFormat::_serialize(list<char>& nValue, const char * nName)
 	{
 		if (mSqlDealWhere_ == mSqlDeal)
 		{
@@ -83,11 +83,11 @@ namespace std {
 		}
 	}
 
-	void SqlFormat::_serialize(unsigned char& nValue, const wchar_t * nName, unsigned short nSqlFieldId)
+	void SqlFormat::_serialize(unsigned char& nValue, const char * nName, unsigned short nSqlFieldId)
 	{
 		if (mSqlDealCreate_ == mSqlDeal)
 		{
-			this->_runCreate(nValue, nName, L"INT(10) UNSIGNED", nSqlFieldId);
+			this->_runCreate(nValue, nName, "INT(10) UNSIGNED", nSqlFieldId);
 		}
 		else if (mSqlDealSelect_ == mSqlDeal)
 		{
@@ -118,7 +118,7 @@ namespace std {
 		}
 	}
 
-	void SqlFormat::_serialize(list<unsigned char>& nValue, const wchar_t * nName)
+	void SqlFormat::_serialize(list<unsigned char>& nValue, const char * nName)
 	{
 		if (mSqlDealWhere_ == mSqlDeal)
 		{
@@ -129,11 +129,11 @@ namespace std {
 		}
 	}
 
-	void SqlFormat::_serialize(short& nValue, const wchar_t * nName, unsigned short nSqlFieldId)
+	void SqlFormat::_serialize(short& nValue, const char * nName, unsigned short nSqlFieldId)
 	{
 		if (mSqlDealCreate_ == mSqlDeal)
 		{
-			this->_runCreate(nValue, nName, L"INT(10)", nSqlFieldId);
+			this->_runCreate(nValue, nName, "INT(10)", nSqlFieldId);
 		}
 		else if (mSqlDealSelect_ == mSqlDeal)
 		{
@@ -164,7 +164,7 @@ namespace std {
 		}
 	}
 
-	void SqlFormat::_serialize(list<short>& nValue, const wchar_t * nName)
+	void SqlFormat::_serialize(list<short>& nValue, const char * nName)
 	{
 		if (mSqlDealWhere_ == mSqlDeal)
 		{
@@ -175,11 +175,11 @@ namespace std {
 		}
 	}
 
-	void SqlFormat::_serialize(unsigned short& nValue, const wchar_t * nName, unsigned short nSqlFieldId)
+	void SqlFormat::_serialize(unsigned short& nValue, const char * nName, unsigned short nSqlFieldId)
 	{
 		if (mSqlDealCreate_ == mSqlDeal)
 		{
-			this->_runCreate(nValue, nName, L"INT(10) UNSIGNED", nSqlFieldId);
+			this->_runCreate(nValue, nName, "INT(10) UNSIGNED", nSqlFieldId);
 		}
 		else if (mSqlDealSelect_ == mSqlDeal)
 		{
@@ -210,7 +210,7 @@ namespace std {
 		}
 	}
 
-	void SqlFormat::_serialize(list<unsigned short>& nValue, const wchar_t * nName)
+	void SqlFormat::_serialize(list<unsigned short>& nValue, const char * nName)
 	{
 		if (mSqlDealWhere_ == mSqlDeal)
 		{
@@ -221,11 +221,11 @@ namespace std {
 		}
 	}
 
-	void SqlFormat::_serialize(long& nValue, const wchar_t * nName, unsigned short nSqlFieldId)
+	void SqlFormat::_serialize(long& nValue, const char * nName, unsigned short nSqlFieldId)
 	{
 		if (mSqlDealCreate_ == mSqlDeal)
 		{
-			this->_runCreate(nValue, nName, L"INT(10)", nSqlFieldId);
+			this->_runCreate(nValue, nName, "INT(10)", nSqlFieldId);
 		}
 		else if (mSqlDealSelect_ == mSqlDeal)
 		{
@@ -256,7 +256,7 @@ namespace std {
 		}
 	}
 
-	void SqlFormat::_serialize(list<long>& nValue, const wchar_t * nName)
+	void SqlFormat::_serialize(list<long>& nValue, const char * nName)
 	{
 		if (mSqlDealWhere_ == mSqlDeal)
 		{
@@ -267,11 +267,11 @@ namespace std {
 		}
 	}
 
-	void SqlFormat::_serialize(unsigned long& nValue, const wchar_t * nName, unsigned short nSqlFieldId)
+	void SqlFormat::_serialize(unsigned long& nValue, const char * nName, unsigned short nSqlFieldId)
 	{
 		if (mSqlDealCreate_ == mSqlDeal)
 		{
-			this->_runCreate(nValue, nName, L"INT(10) UNSIGNED", nSqlFieldId);
+			this->_runCreate(nValue, nName, "INT(10) UNSIGNED", nSqlFieldId);
 		}
 		else if (mSqlDealSelect_ == mSqlDeal)
 		{
@@ -302,7 +302,7 @@ namespace std {
 		}
 	}
 
-	void SqlFormat::_serialize(list<unsigned long>& nValue, const wchar_t * nName)
+	void SqlFormat::_serialize(list<unsigned long>& nValue, const char * nName)
 	{
 		if (mSqlDealWhere_ == mSqlDeal)
 		{
@@ -313,11 +313,11 @@ namespace std {
 		}
 	}
 
-	void SqlFormat::_serialize(long long& nValue, const wchar_t * nName, unsigned short nSqlFieldId)
+	void SqlFormat::_serialize(long long& nValue, const char * nName, unsigned short nSqlFieldId)
 	{
 		if (mSqlDealCreate_ == mSqlDeal)
 		{
-			this->_runCreate(nValue, nName, L"BIGINT", nSqlFieldId);
+			this->_runCreate(nValue, nName, "BIGINT", nSqlFieldId);
 		}
 		else if (mSqlDealSelect_ == mSqlDeal)
 		{
@@ -348,7 +348,7 @@ namespace std {
 		}
 	}
 
-	void SqlFormat::_serialize(list<long long>& nValue, const wchar_t * nName)
+	void SqlFormat::_serialize(list<long long>& nValue, const char * nName)
 	{
 		if (mSqlDealWhere_ == mSqlDeal)
 		{
@@ -359,11 +359,11 @@ namespace std {
 		}
 	}
 
-	void SqlFormat::_serialize(unsigned long long& nValue, const wchar_t * nName, unsigned short nSqlFieldId)
+	void SqlFormat::_serialize(unsigned long long& nValue, const char * nName, unsigned short nSqlFieldId)
 	{
 		if (mSqlDealCreate_ == mSqlDeal)
 		{
-			this->_runCreate(nValue, nName, L"BIGINT UNSIGNED", nSqlFieldId);
+			this->_runCreate(nValue, nName, "BIGINT UNSIGNED", nSqlFieldId);
 		}
 		else if (mSqlDealSelect_ == mSqlDeal)
 		{
@@ -394,7 +394,7 @@ namespace std {
 		}
 	}
 
-	void SqlFormat::_serialize(list<unsigned long long>& nValue, const wchar_t * nName)
+	void SqlFormat::_serialize(list<unsigned long long>& nValue, const char * nName)
 	{
 		if (mSqlDealWhere_ == mSqlDeal)
 		{
@@ -405,11 +405,11 @@ namespace std {
 		}
 	}
 
-	void SqlFormat::_serialize(float& nValue, const wchar_t * nName, unsigned short nSqlFieldId)
+	void SqlFormat::_serialize(float& nValue, const char * nName, unsigned short nSqlFieldId)
 	{
 		if (mSqlDealCreate_ == mSqlDeal)
 		{
-			this->_runCreate(nValue, nName, L"FLOAT", nSqlFieldId);
+			this->_runCreate(nValue, nName, "FLOAT", nSqlFieldId);
 		}
 		else if (mSqlDealSelect_ == mSqlDeal)
 		{
@@ -440,7 +440,7 @@ namespace std {
 		}
 	}
 
-	void SqlFormat::_serialize(list<float>& nValue, const wchar_t * nName)
+	void SqlFormat::_serialize(list<float>& nValue, const char * nName)
 	{
 		if (mSqlDealWhere_ == mSqlDeal)
 		{
@@ -451,11 +451,11 @@ namespace std {
 		}
 	}
 
-	void SqlFormat::_serialize(double& nValue, const wchar_t * nName, unsigned short nSqlFieldId)
+	void SqlFormat::_serialize(double& nValue, const char * nName, unsigned short nSqlFieldId)
 	{
 		if (mSqlDealCreate_ == mSqlDeal)
 		{
-			this->_runCreate(nValue, nName, L"DOUBLE", nSqlFieldId);
+			this->_runCreate(nValue, nName, "DOUBLE", nSqlFieldId);
 		}
 		else if (mSqlDealSelect_ == mSqlDeal)
 		{
@@ -486,7 +486,7 @@ namespace std {
 		}
 	}
 
-	void SqlFormat::_serialize(list<double>& nValue, const wchar_t * nName)
+	void SqlFormat::_serialize(list<double>& nValue, const char * nName)
 	{
 		if (mSqlDealWhere_ == mSqlDeal)
 		{
@@ -497,11 +497,11 @@ namespace std {
 		}
 	}
 
-	void SqlFormat::_serialize(wstring& nValue, const wchar_t * nName, unsigned short nSqlFieldId)
+	void SqlFormat::_serialize(wstring& nValue, const char * nName, unsigned short nSqlFieldId)
 	{
 		if (mSqlDealCreate_ == mSqlDeal)
 		{
-			this->_runCreate(nValue, nName, L"VARCHAR(255)", nSqlFieldId);
+			this->_runCreate(nValue, nName, "VARCHAR(255)", nSqlFieldId);
 		}
 		else if (mSqlDealSelect_ == mSqlDeal)
 		{
@@ -532,7 +532,7 @@ namespace std {
 		}
 	}
 
-	void SqlFormat::_serialize(list<wstring>& nValue, const wchar_t * nName)
+	void SqlFormat::_serialize(list<wstring>& nValue, const char * nName)
 	{
 		if (mSqlDealWhere_ == mSqlDeal)
 		{
@@ -543,11 +543,11 @@ namespace std {
 		}
 	}
 
-	void SqlFormat::_serialize(string& nValue, const wchar_t * nName, unsigned short nSqlFieldId)
+	void SqlFormat::_serialize(string& nValue, const char * nName, unsigned short nSqlFieldId)
 	{
 		if (mSqlDealCreate_ == mSqlDeal)
 		{
-			this->_runCreate(nValue, nName, L"VARCHAR(255)", nSqlFieldId);
+			this->_runCreate(nValue, nName, "VARCHAR(255)", nSqlFieldId);
 		}
 		else if (mSqlDealSelect_ == mSqlDeal)
 		{
@@ -578,7 +578,7 @@ namespace std {
 		}
 	}
 
-	void SqlFormat::_serialize(list<string>& nValue, const wchar_t * nName)
+	void SqlFormat::_serialize(list<string>& nValue, const char * nName)
 	{
 		if (mSqlDealWhere_ == mSqlDeal)
 		{
@@ -589,27 +589,16 @@ namespace std {
 		}
 	}
 
-	void SqlFormat::_addHeadstream(SqlHeadstreamPtr& nSqlHeadstreams)
+	const string& SqlFormat::_sqlCommand()
 	{
-		mSqlHeadstreams.push_back(nSqlHeadstreams);
-	}
-
-	const wstring& SqlFormat::_sqlCommand()
-	{
-		list<SqlHeadstreamPtr>::iterator it = mSqlHeadstreams.begin();
-		for ( ; it != mSqlHeadstreams.end(); ++it )
-		{
-			SqlHeadstreamPtr& sqlHeadstream = (*it);
-			this->_runFormat(sqlHeadstream);
-		}
 		return mValue;
 	}
 
-	void SqlFormat::_runInsert(wstring& nValue, const wchar_t * nName)
+	void SqlFormat::_runInsert(string& nValue, const char * nName)
 	{
 		if (false == mBeg)
 		{
-			mValue += L",";
+			mValue += ",";
 		}
 		mValue += mValueCharacter;
 		mValue += nValue;
@@ -620,16 +609,16 @@ namespace std {
 		}
 	}
 	
-	void SqlFormat::_runUpdate(wstring& nValue, const wchar_t * nName)
+	void SqlFormat::_runUpdate(string& nValue, const char * nName)
 	{
 		if (false == mBeg)
 		{
-			mValue += L",";
+			mValue += ",";
 		}
 		mValue += mFieldCharacter;
 		mValue += nName;
 		mValue += mFieldCharacter;
-		mValue += L"=";
+		mValue += "=";
 		mValue += mValueCharacter;
 		mValue += nValue;
 		mValue += mValueCharacter;
@@ -639,200 +628,58 @@ namespace std {
 		}
 	}
 
-	void SqlFormat::_runWhere(list<wstring>& nValue, const wchar_t * nName)
+	void SqlFormat::_runWhere(list<string>& nValue, const char * nName)
 	{
 		mValue += nName;
-		mValue += L"(";
+		mValue += "(";
 		bool temp = false;
-		list<wstring>::iterator it = nValue.begin();
+		list<string>::iterator it = nValue.begin();
 		for ( ; it != nValue.end(); ++it )
 		{
 			if (temp)
 			{
-				mValue += L",";
+				mValue += ",";
 			}
 			mValue += mValueCharacter;
 			mValue += (*it);
 			mValue += mValueCharacter;
 			temp = true;
 		}
-		mValue += L") ";
+		mValue += ") ";
 	}
 
-	void SqlFormat::_runWhere(wstring& nValue, const wchar_t * nName)
+	void SqlFormat::_runWhere(string& nValue, const char * nName)
 	{
 		mValue += nName;
 		mValue += mValueCharacter;
 		mValue += nValue;
 		mValue += mValueCharacter;
-		mValue += L" ";
-	}
-
-	void SqlFormat::_runFormat(SqlHeadstreamPtr& nSqlHeadstream)
-	{
-		SqlType_ sqlType_ = nSqlHeadstream->_sqlType();
-		if (mSqlTypeCreate_ == sqlType_)
-		{
-			this->_runCreate(nSqlHeadstream);
-		}
-		else if (mSqlTypeSelect_ == sqlType_)
-		{
-			this->_runSelect(nSqlHeadstream);
-		}
-		else if (mSqlTypeInsert_ == sqlType_)
-		{
-			this->_runInsert(nSqlHeadstream);
-		}
-		else if (mSqlTypeUpdate_ == sqlType_)
-		{
-			this->_runUpdate(nSqlHeadstream);
-		}
-		else if (mSqlTypeInsertUpdate_ == sqlType_)
-		{
-			this->_runInsertUpdate(nSqlHeadstream);
-		}
-		else if (mSqlTypeDelete_ == sqlType_)
-		{
-			this->_runDelete(nSqlHeadstream);
-		}
-		else
-		{
-		}
-	}
-
-	void SqlFormat::_runCreate(SqlHeadstreamPtr& nSqlHeadstream)
-	{
-		mValue += L"CREATE TABLE ";
-		mValue += mFieldCharacter;
-		mValue += nSqlHeadstream->_tableName();
-		mValue += mFieldCharacter;
-		mValue += L"(";
-		mBeg = true;
-		mSqlDeal = mSqlDealCreate_;
-		nSqlHeadstream->_runSelect(this);
-		mBeg = true;
-		mEnd = false;
-		mSqlDeal = mSqlDealPrimary_;
-		nSqlHeadstream->_runSelect(this);
-		if (mEnd)
-		{
-			mValue += L")";
-		}
-		mValue += L")ENGINE=MYISAM DEFAULT CHARSET=utf8;";
-		mSqlDeal = mSqlDealNone_;
-	}
-
-	void SqlFormat::_runSelect(SqlHeadstreamPtr& nSqlHeadstream)
-	{
-		mValue += L"SELECT ";
-		mBeg = true;
-		mSqlDeal = mSqlDealSelect_;
-		nSqlHeadstream->_runSelect(this);
-		mValue += L" FROM ";
-		mValue += mFieldCharacter;
-		mValue += nSqlHeadstream->_tableName();
-		mValue += mFieldCharacter;
-		mValue += L" ";
-		mSqlDeal = mSqlDealWhere_;
-		nSqlHeadstream->_runWhere(this);
-		mSqlDeal = mSqlDealNone_;
-	}
-
-	void SqlFormat::_runInsert(SqlHeadstreamPtr& nSqlHeadstream)
-	{
-		mValue += L"INSERT INTO ";
-		mValue += mFieldCharacter;
-		mValue += nSqlHeadstream->_tableName();
-		mValue += mFieldCharacter;
-		mValue += L" (";
-		mBeg = true;
-		mSqlDeal = mSqlDealSelect_;
-		nSqlHeadstream->_runSelect(this);
-		mValue += L") VALUES (";
-		mBeg = true;
-		mSqlDeal = mSqlDealInsert_;
-		nSqlHeadstream->_runSelect(this);
-		mValue += L") ";
-		mSqlDeal = mSqlDealWhere_;
-		nSqlHeadstream->_runWhere(this);
-		mSqlDeal = mSqlDealNone_;
-	}
-
-	void SqlFormat::_runUpdate(SqlHeadstreamPtr& nSqlHeadstream)
-	{
-		mValue += L"UPDATE ";
-		mValue += mFieldCharacter;
-		mValue += nSqlHeadstream->_tableName();
-		mValue += mFieldCharacter;
-		mValue += L" SET ";
-		mBeg = true;
-		mSqlDeal = mSqlDealUpdate_;
-		nSqlHeadstream->_runSelect(this);
-		mSqlDeal = mSqlDealWhere_;
-		mValue += L" ";
-		nSqlHeadstream->_runWhere(this);
-		mSqlDeal = mSqlDealNone_;
-	}
-
-	void SqlFormat::_runInsertUpdate(SqlHeadstreamPtr& nSqlHeadstream)
-	{
-		mValue += L"INSERT INTO ";
-		mValue += mFieldCharacter;
-		mValue += nSqlHeadstream->_tableName();
-		mValue += mFieldCharacter;
-		mValue += L" (";
-		mBeg = true;
-		mSqlDeal = mSqlDealSelect_;
-		nSqlHeadstream->_runSelect(this);
-		mValue += L") VALUES (";
-		mBeg = true;
-		mSqlDeal = mSqlDealInsert_;
-		nSqlHeadstream->_runSelect(this);
-		mValue += L") ";
-		mSqlDeal = mSqlDealInsertUpdate_;
-		nSqlHeadstream->_runSelect(this);
-		mSqlDeal = mSqlDealWhere_;
-		nSqlHeadstream->_runWhere(this);
-		mSqlDeal = mSqlDealNone_;
-	}
-
-	void SqlFormat::_runDelete(SqlHeadstreamPtr& nSqlHeadstream)
-	{
-		mValue = L"DELETE FROM ";
-		mValue += mFieldCharacter;
-		mValue += nSqlHeadstream->_tableName();
-		mValue += mFieldCharacter;
-		mValue += L" ";
-		mSqlDeal = mSqlDealWhere_;
-		nSqlHeadstream->_runWhere(this);
-		mSqlDeal = mSqlDealNone_;
+		mValue += " ";
 	}
 
 	SqlFormat::SqlFormat()
 	{
-		mSqlHeadstreams.clear();
 		mUpdate.clear();
 		mSqlDeal = mSqlDealNone_;
-		mValue = L"";
-		mName = L"";
+		mValue = "";
+		mName = "";
 		mBeg = false;
 		mEnd = false;
 	}
 
 	SqlFormat::~SqlFormat()
 	{
-		mSqlHeadstreams.clear();
 		mUpdate.clear();
 		mSqlDeal = mSqlDealNone_;
-		mValue = L"";
-		mName = L"";
+		mValue = "";
+		mName = "";
 		mBeg = false;
 		mEnd = false;
 	}
 
 
-	wstring SqlFormat::mValueCharacter = L"'";
-	wstring SqlFormat::mFieldCharacter = L"`";
-	wstring SqlFormat::mUpdateCharacter = L"@";
+	string SqlFormat::mValueCharacter = "'";
+	string SqlFormat::mFieldCharacter = "`";
+	string SqlFormat::mUpdateCharacter = "@";
 
 }

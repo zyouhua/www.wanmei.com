@@ -108,6 +108,12 @@
     <ClCompile Include="sqlQuery\SqlConnection\SqlSingleton.cpp">
       <Filter>SqlQuery\SqlConnection</Filter>
     </ClCompile>
+    <ClCompile Include="sqlQuery\SqlConnection\SqlResult.cpp">
+      <Filter>SqlQuery\SqlConnection</Filter>
+    </ClCompile>
+    <ClCompile Include="sqlQuery\SqlFormat\SqlParamter.cpp">
+      <Filter>SqlQuery\SqlFormat</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="bzlib\bzlib.h">
@@ -194,12 +200,6 @@
     <ClInclude Include="package\mpq\MpqWriter.h">
       <Filter>Package\Mpq</Filter>
     </ClInclude>
-    <ClInclude Include="sqlQuery\SqlFormat\ISqlHeadstream.h">
-      <Filter>SqlQuery\SqlFormat</Filter>
-    </ClInclude>
-    <ClInclude Include="sqlQuery\SqlFormat\ISqlStream.h">
-      <Filter>SqlQuery\SqlFormat</Filter>
-    </ClInclude>
     <ClInclude Include="sqlQuery\SqlFormat\SqlDeal_.h">
       <Filter>SqlQuery\SqlFormat</Filter>
     </ClInclude>
@@ -223,6 +223,12 @@
     </ClInclude>
     <ClInclude Include="sqlQuery\SqlInc-.h">
       <Filter>SqlQuery</Filter>
+    </ClInclude>
+    <ClInclude Include="sqlQuery\SqlConnection\SqlResult.h">
+      <Filter>SqlQuery\SqlConnection</Filter>
+    </ClInclude>
+    <ClInclude Include="sqlQuery\SqlFormat\SqlParamter.h">
+      <Filter>SqlQuery\SqlFormat</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

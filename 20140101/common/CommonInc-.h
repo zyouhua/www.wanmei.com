@@ -9,3 +9,5 @@
 namespace logging = boost::log;
 namespace sinks = boost::log::sinks;
 namespace keywords = boost::log::keywords;
+
+static char * MODULE_NAME = "Common";

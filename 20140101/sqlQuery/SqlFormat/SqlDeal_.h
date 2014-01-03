@@ -11,6 +11,9 @@ namespace std {
 		mSqlDealUpdate_,
 		mSqlDealInsertUpdate_,
 		mSqlDealWhere_,
+		mSqlDealUpdateSelect_,
+		mSqlDealUpdateWhen_,
+		mSqlDealUpdateThen_,
 		mSqlDealPrimary_,
 	};
 

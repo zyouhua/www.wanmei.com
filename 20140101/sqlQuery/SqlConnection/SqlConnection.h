@@ -2,16 +2,19 @@
 
 namespace std {
 
+	class SqlSingleton;
+
 	class SqlConnection
 	{
 	public:
-		void _runConnect();
+		SqlResultPtr _runQuery(const string& nSql);
+		void _runSql(const string& nSql);
 
-		SqlConnection(sql::Driver * nDriver);
+		SqlConnection(SqlSingleton& nSqlSingleton);
 		~SqlConnection();
-
 	private:
-		sql::Driver * mDriver;
+		sql::Connection * mConnection;
+		sql::Statement * mStatement;
 	};
 
 	typedef shared_ptr<SqlConnection> SqlConnectionPtr;

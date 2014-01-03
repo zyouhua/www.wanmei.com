@@ -17,3 +17,5 @@ typedef unsigned __int64 __u64;
 #else
 #define __funapi __declspec(dllimport)
 #endif
+
+extern char * MODULE_NAME;

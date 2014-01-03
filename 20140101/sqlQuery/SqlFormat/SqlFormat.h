@@ -5,121 +5,129 @@ namespace std {
 	class SqlFormat
 	{
 	public:
-		void _serialize(bool& nValue, const wchar_t * nName, unsigned short nSqlFieldId = mSqlFieldIdNone_);
+		void _serialize(bool& nValue, const char * nName, unsigned short nSqlFieldId = mSqlFieldIdNone_);
 
-		void _serialize(char& nValue, const wchar_t * nName, unsigned short nSqlFieldId = mSqlFieldIdNone_);
+		void _serialize(char& nValue, const char * nName, unsigned short nSqlFieldId = mSqlFieldIdNone_);
 
-		void _serialize(list<char>& nValue, const wchar_t * nName);
+		void _serialize(list<char>& nValue, const char * nName);
 
-		void _serialize(unsigned char& nValue, const wchar_t * nName, unsigned short nSqlFieldId = mSqlFieldIdNone_);
+		void _serialize(unsigned char& nValue, const char * nName, unsigned short nSqlFieldId = mSqlFieldIdNone_);
 
-		void _serialize(list<unsigned char>& nValue, const wchar_t * nName);
+		void _serialize(list<unsigned char>& nValue, const char * nName);
 
-		void _serialize(short& nValue, const wchar_t * nName, unsigned short nSqlFieldId = mSqlFieldIdNone_);
+		void _serialize(short& nValue, const char * nName, unsigned short nSqlFieldId = mSqlFieldIdNone_);
 
-		void _serialize(list<short>& nValue, const wchar_t * nName);
+		void _serialize(list<short>& nValue, const char * nName);
 
-		void _serialize(unsigned short& nValue, const wchar_t * nName, unsigned short nSqlFieldId = mSqlFieldIdNone_);
+		void _serialize(unsigned short& nValue, const char * nName, unsigned short nSqlFieldId = mSqlFieldIdNone_);
 
-		void _serialize(list<unsigned short>& nValue, const wchar_t * nName);
+		void _serialize(list<unsigned short>& nValue, const char * nName);
 
-		void _serialize(long& nValue, const wchar_t * nName, unsigned short nSqlFieldId = mSqlFieldIdNone_);
+		void _serialize(long& nValue, const char * nName, unsigned short nSqlFieldId = mSqlFieldIdNone_);
 
-		void _serialize(list<long>& nValue, const wchar_t * nName);
+		void _serialize(list<long>& nValue, const char * nName);
 
-		void _serialize(unsigned long& nValue, const wchar_t * nName, unsigned short nSqlFieldId = mSqlFieldIdNone_);
+		void _serialize(unsigned long& nValue, const char * nName, unsigned short nSqlFieldId = mSqlFieldIdNone_);
 
-		void _serialize(list<unsigned long>& nValue, const wchar_t * nName);
+		void _serialize(list<unsigned long>& nValue, const char * nName);
 
-		void _serialize(long long& nValue, const wchar_t * nName, unsigned short nSqlFieldId = mSqlFieldIdNone_);
+		void _serialize(long long& nValue, const char * nName, unsigned short nSqlFieldId = mSqlFieldIdNone_);
 
-		void _serialize(list<long long>& nValue, const wchar_t * nName);
+		void _serialize(list<long long>& nValue, const char * nName);
 
-		void _serialize(unsigned long long& nValue, const wchar_t * nName, unsigned short nSqlFieldId = mSqlFieldIdNone_);
+		void _serialize(unsigned long long& nValue, const char * nName, unsigned short nSqlFieldId = mSqlFieldIdNone_);
 
-		void _serialize(list<unsigned long long>& nValue, const wchar_t * nName);
+		void _serialize(list<unsigned long long>& nValue, const char * nName);
 
-		void _serialize(float& nValue, const wchar_t * nName, unsigned short nSqlFieldId = mSqlFieldIdNone_);
+		void _serialize(float& nValue, const char * nName, unsigned short nSqlFieldId = mSqlFieldIdNone_);
 
-		void _serialize(list<float>& nValue, const wchar_t * nName);
+		void _serialize(list<float>& nValue, const char * nName);
 
-		void _serialize(double& nValue, const wchar_t * nName, unsigned short nSqlFieldId = mSqlFieldIdNone_);
+		void _serialize(double& nValue, const char * nName, unsigned short nSqlFieldId = mSqlFieldIdNone_);
 
-		void _serialize(list<double>& nValue, const wchar_t * nName);
+		void _serialize(list<double>& nValue, const char * nName);
 
-		void _serialize(wstring& nValue, const wchar_t * nName, unsigned short nSqlFieldId = mSqlFieldIdNone_);
+		void _serialize(wstring& nValue, const char * nName, unsigned short nSqlFieldId = mSqlFieldIdNone_);
 
-		void _serialize(list<wstring>& nValue, const wchar_t * nName);
+		void _serialize(list<wstring>& nValue, const char * nName);
 
-		void _serialize(string& nValue, const wchar_t * nName, unsigned short nSqlFieldId = mSqlFieldIdNone_);
+		void _serialize(string& nValue, const char * nName, unsigned short nSqlFieldId = mSqlFieldIdNone_);
 
-		void _serialize(list<string>& nValue, const wchar_t * nName);
-
-		void _addHeadstream(SqlHeadstreamPtr& nSqlHeadstreams);
-
-		const wstring& _sqlCommand();
+		void _serialize(list<string>& nValue, const char * nName);
 
 		template<class __t>
-		void _serialize(list<__t>& nValue, const wchar_t * nName);
+		void _addHeadstream(__t& nSqlHeadstreams);
+
+		const string& _sqlCommand();
+
+		template<class __t>
+		void _serialize(list<__t>& nValue, const char * nName);
 
 	private:
 		template <typename __t>
-		void _runCreate(__t& nValue, const wchar_t * nName, const wchar_t * nType, int nSqlFieldId);
+		void _runCreate(__t& nValue, const char * nName, const char * nType, int nSqlFieldId);
 
 		template <typename __t>
-		void _runSelect(__t& nValue, const wchar_t * nName);
+		void _runSelect(__t& nValue, const char * nName);
 
 		template <typename __t>
-		void _runSelect(list<__t>& nValue, const wchar_t * nName);
+		void _runSelect(list<__t>& nValue, const char * nName);
 
 		template <typename __t>
-		void _runInsert(list<__t>& nValue, const wchar_t * nName);
+		void _runInsert(list<__t>& nValue, const char * nName);
 
 		template <typename __t>
-		void _runInsert(__t& nValue, const wchar_t * nName);
+		void _runInsert(__t& nValue, const char * nName);
 
-		void _runInsert(wstring& nValue, const wchar_t * nName);
-
-		template <typename __t>
-		void _runUpdate(list<__t>& nValue, const wchar_t * nName);
+		void _runInsert(string& nValue, const char * nName);
 
 		template <typename __t>
-		void _runUpdate(__t& nValue, const wchar_t * nName);
-
-		void _runUpdate(wstring& nValue, const wchar_t * nName);
+		void _runUpdate(list<__t>& nValue, const char * nName);
 
 		template <typename __t>
-		void _runInsertUpdate(list<__t>& nValue, const wchar_t * nName);
+		void _runUpdate(__t& nValue, const char * nName);
+
+		void _runUpdate(string& nValue, const char * nName);
 
 		template <typename __t>
-		void _runInsertUpdate(__t& nValue, const wchar_t * nName);
+		void _runInsertUpdate(list<__t>& nValue, const char * nName);
 
 		template <typename __t>
-		void _runWhere(list<__t>& nValue, const wchar_t * nName);
-
-		void _runWhere(list<wstring>& nValue, const wchar_t * nName);
+		void _runInsertUpdate(__t& nValue, const char * nName);
 
 		template <typename __t>
-		void _runWhere(__t& nValue, const wchar_t * nName);
+		void _runWhere(list<__t>& nValue, const char * nName);
 
-		void _runWhere(wstring& nValue, const wchar_t * nName);
+		void _runWhere(list<string>& nValue, const char * nName);
 
 		template <typename __t>
-		void _runPrimary(__t& nValue, const wchar_t * nName);
+		void _runWhere(__t& nValue, const char * nName);
 
-		void _runFormat(SqlHeadstreamPtr& nSqlHeadstream);
+		void _runWhere(string& nValue, const char * nName);
 
-		void _runCreate(SqlHeadstreamPtr& nSqlHeadstream);
+		template <typename __t>
+		void _runPrimary(__t& nValue, const char * nName);
 
-		void _runSelect(SqlHeadstreamPtr& nSqlHeadstream);
+		template <typename __t>
+		void _runFormat(__t& nSqlHeadstream);
 
-		void _runInsert(SqlHeadstreamPtr& nSqlHeadstream);
+		template <typename __t>
+		void _runCreate(__t& nSqlHeadstream);
 
-		void _runUpdate(SqlHeadstreamPtr& nSqlHeadstream);
+		template <typename __t>
+		void _runSelect(__t& nSqlHeadstream);
 
-		void _runInsertUpdate(SqlHeadstreamPtr& nSqlHeadstream);
+		template <typename __t>
+		void _runInsert(__t& nSqlHeadstream);
 
-		void _runDelete(SqlHeadstreamPtr& nSqlHeadstream);
+		template <typename __t>
+		void _runUpdate(__t& nSqlHeadstream);
+
+		template <typename __t>
+		void _runInsertUpdate(__t& nSqlHeadstream);
+
+		template <typename __t>
+		void _runDelete(__t& nSqlHeadstream);
 
 	public:
 		SqlFormat();
@@ -127,36 +135,42 @@ namespace std {
 		~SqlFormat();
 
 	private:
-		list<SqlHeadstreamPtr> mSqlHeadstreams;
-		list<wstring> mUpdate;
+		list<SqlParamterPtr> mSqlParamter;
+		list<string> mUpdate;
 		SqlDeal_ mSqlDeal;
-		wstring mValue;
-		wstring mName;
+		string mValue;
+		string mName;
 		bool mBeg;
 		bool mEnd;
 
 	private:
-		static wstring mValueCharacter;
-		static wstring mFieldCharacter;
-		static wstring mUpdateCharacter;
+		static string mValueCharacter;
+		static string mFieldCharacter;
+		static string mUpdateCharacter;
 	};
 
 	template<class __t>
-	void SqlFormat::_serialize(list<__t>& nValue, const wchar_t * nName)
+	void SqlFormat::_addHeadstream(__t& nSqlHeadstreams)
 	{
-		if (SqlDeal_.mSelect_ == mSqlDeal)
+		this->_runFormat(nSqlHeadstreams);
+	}
+
+	template<class __t>
+	void SqlFormat::_serialize(list<__t>& nValue, const char * nName)
+	{
+		if (mSqlDealSelect_ == mSqlDeal)
 		{
 			this->_runSelect(nValue, nName);
 		}
-		else if (SqlDeal_.mInsert_ == mSqlDeal)
+		else if (mSqlDealInsert_ == mSqlDeal)
 		{
 			this->_runInsert(nValue, nName);
 		}
-		else if (SqlDeal_.mInsertUpdate_ == mSqlDeal)
+		else if (mSqlDealInsertUpdate_ == mSqlDeal)
 		{
 			this->_runInsertUpdate(nValue, nName);
 		}
-		else if (SqlDeal_.mUpdate_ == mSqlDeal)
+		else if (mSqlDealUpdate_ == mSqlDeal)
 		{
 			this->_runUpdate(nValue, nName);
 		}
@@ -166,32 +180,32 @@ namespace std {
 	}
 
 	template <typename __t>
-	void SqlFormat::_runCreate(__t& nValue, const wchar_t * nName, const wchar_t * nType, int nSqlFieldId)
+	void SqlFormat::_runCreate(__t& nValue, const char * nName, const char * nType, int nSqlFieldId)
 	{
 		if (false == mBeg)
 		{
-			mValue += L",";
+			mValue += ",";
 		}
 		mValue += mFieldCharacter;
 		mValue += nName;
 		mValue += mFieldCharacter;
-		mValue += L" ";
+		mValue += " ";
 		mValue += nType;
 		if ((nSqlFieldId & mSqlFieldIdZeroFill_) > 0)
 		{
-			mValue += L" ZEROFILL";
+			mValue += " ZEROFILL";
 		}
 		if ((nSqlFieldId & mSqlFieldIdBinary_) > 0)
 		{
-			mValue += L" BINARY";
+			mValue += " BINARY";
 		}
 		if ((nSqlFieldId & mSqlFieldIdNotNull_) > 0)
 		{
-			mValue += L" NOT NULL";
+			mValue += " NOT NULL";
 		}
 		if ((nSqlFieldId & mSqlFieldIdAutoIncremet_) > 0)
 		{
-			mValue += L" AUTO_INCREMENT";
+			mValue += " AUTO_INCREMENT";
 		}
 		if (mBeg)
 		{
@@ -200,11 +214,11 @@ namespace std {
 	}
 
 	template<class __t>
-	void SqlFormat::_runSelect(__t& nValue, const wchar_t * nName)
+	void SqlFormat::_runSelect(__t& nValue, const char * nName)
 	{
 		if (false == mBeg)
 		{
-			mValue += L",";
+			mValue += ",";
 		}
 		mValue += mFieldCharacter;
 		mValue += nName;
@@ -216,7 +230,7 @@ namespace std {
 	}
 
 	template <typename __t>
-	void SqlFormat::_runSelect(list<__t>& nValue, const wchar_t * nName)
+	void SqlFormat::_runSelect(list<__t>& nValue, const char * nName)
 	{
 		list<__t>::iterator it = nValue.begin();
 		if (it != nValue.end())
@@ -231,7 +245,7 @@ namespace std {
 	}
 
 	template <typename __t>
-	void SqlFormat::_runInsert(list<__t>& nValue, const wchar_t * nName)
+	void SqlFormat::_runInsert(list<__t>& nValue, const char * nName)
 	{
 		bool temp = false;
 		list<__t>::iterator it = nValue.begin();
@@ -239,7 +253,7 @@ namespace std {
 		{
 			if (temp)
 			{
-				mValue += L"),(";
+				mValue += "),(";
 				mBeg = true;
 			}
 			it->_runSelect(this);
@@ -248,14 +262,14 @@ namespace std {
 	}
 
 	template <typename __t>
-	void SqlFormat::_runInsert(__t& nValue, const wchar_t * nName)
+	void SqlFormat::_runInsert(__t& nValue, const char * nName)
 	{
 		if (false == mBeg)
 		{
-			mValue += L",";
+			mValue += ",";
 		}
 		mValue += mValueCharacter;
-		mValue += _convert<wstring, __t>(nValue);
+		mValue += _convert<string, __t>(nValue);
 		mValue += mValueCharacter;
 		if (mBeg)
 		{
@@ -264,7 +278,7 @@ namespace std {
 	}
 
 	template <typename __t>
-	void SqlFormat::_runUpdate(list<__t>& nValue, const wchar_t * nName)
+	void SqlFormat::_runUpdate(list<__t>& nValue, const char * nName)
 	{
 		mUpdate.Clear();
 		mSqlDeal = mSqlDealUpdateSelect_;
@@ -280,12 +294,12 @@ namespace std {
 			mName = (*it);
 			if (false == temp_)
 			{
-				mValue += L",";
+				mValue += ",";
 			}
 			mValue += mFieldCharacter;
 			mValue += mName;
 			mValue += mFieldCharacter;
-			mValue += L"= CASE ";
+			mValue += "= CASE ";
 			mSqlDeal = mSqlDealSelect_;
 			mBeg = true;
 			if (it != nValue.end())
@@ -295,19 +309,19 @@ namespace std {
 			for ( ; it != nValue.end(); ++it )
 			{
 				mSqlDeal = mSqlDealUpdateWhen_;
-				mValue += L" WHEN ";
+				mValue += " WHEN ";
 				it->_runWhen(this);
 				mSqlDeal = mSqlDealUpdateThen_;
-				mValue += L"THEN ";
+				mValue += "THEN ";
 				it->_runSelect(this);
 			}
-			mValue += L" END";
+			mValue += " END";
 			if (temp_)
 			{
 				temp_ = false;
 			}
 		}
-		mValue += L" WHERE ";
+		mValue += " WHERE ";
 		mSqlDeal = mSqlDealSelect_;
 		mBeg = true;
 		it = nValue.begin();
@@ -318,27 +332,27 @@ namespace std {
 		}
 		mSqlDeal = mSqlDealInsert_;
 		mBeg = true;
-		mValue += L" IN (";
+		mValue += " IN (";
 		for ( ; it != nValue.end(); ++it )
 		{
 			it->_runWhen(this);
 		}
-		mValue += L")";
+		mValue += ")";
 	}
 
 	template <typename __t>
-	void SqlFormat::_runUpdate(__t& nValue, const wchar_t * nName)
+	void SqlFormat::_runUpdate(__t& nValue, const char * nName)
 	{
 		if (false == mBeg)
 		{
-			mValue += L",";
+			mValue += ",";
 		}
 		mValue += mFieldCharacter;
 		mValue += nName;
 		mValue += mFieldCharacter;
-		mValue += L"=";
+		mValue += "=";
 		mValue += mValueCharacter;
-		mValue += _convert<wstring, __t>(nValue);
+		mValue += _convert<string, __t>(nValue);
 		mValue += mValueCharacter;
 		if (mBeg)
 		{
@@ -347,9 +361,9 @@ namespace std {
 	}
 
 	template <typename __t>
-	void SqlFormat::_runInsertUpdate(list<__t>& nValue, const wchar_t * nName)
+	void SqlFormat::_runInsertUpdate(list<__t>& nValue, const char * nName)
 	{
-		mValue += L"ON DUPLICATE KEY UPDATE ";
+		mValue += "ON DUPLICATE KEY UPDATE ";
 		mBeg = true;
 		list<__t>::iterator it = nValue.begin();
 		if (it != list<__t>.end())
@@ -359,20 +373,20 @@ namespace std {
 	}
 
 	template <typename __t>
-	void SqlFormat::_runInsertUpdate(__t& nValue, const wchar_t * nName)
+	void SqlFormat::_runInsertUpdate(__t& nValue, const char * nName)
 	{
 		if (false == mBeg)
 		{
-			mValue += L",";
+			mValue += ",";
 		}
 		mValue += mFieldCharacter;
 		mValue += nName;
 		mValue += mFieldCharacter;
-		mValue += L"=VALUES(";
+		mValue += "=VALUES(";
 		mValue += mFieldCharacter;
 		mValue += nName;
 		mValue += mFieldCharacter;
-		mValue += L")";
+		mValue += ")";
 		if (mBeg)
 		{
 			mBeg = false;
@@ -380,20 +394,20 @@ namespace std {
 	}
 
 	template <typename __t>
-	void SqlFormat::_runWhere(list<__t>& nValue, const wchar_t * nName)
+	void SqlFormat::_runWhere(list<__t>& nValue, const char * nName)
 	{
 		mValue += nName;
-		mValue += L"(";
+		mValue += "(";
 		bool temp = false;
 		list<__t>::iterator it = nValue.begin();
 		for ( ; it!= nValue.end(); ++it )
 		{
 			if (temp)
 			{
-				mValue += L",";
+				mValue += ",";
 			}
 			mValue += mValueCharacter;
-			mValue += _convert<wstring, __t>(*it);
+			mValue += _convert<string, __t>(*it);
 			mValue += mValueCharacter;
 			temp = true;
 		}
@@ -401,25 +415,25 @@ namespace std {
 	}
 
 	template <typename __t>
-	void SqlFormat::_runWhere(__t& nValue, const wchar_t * nName)
+	void SqlFormat::_runWhere(__t& nValue, const char * nName)
 	{
 		mValue += nName;
 		mValue += mValueCharacter;
-		mValue += _convert<wstring, __t>(nValue);
+		mValue += _convert<string, __t>(nValue);
 		mValue += mValueCharacter;
-		mValue += L" ";
+		mValue += " ";
 	}
 
 	template <typename __t>
-	void SqlFormat::_runPrimary(__t& nValue, const wchar_t * nName)
+	void SqlFormat::_runPrimary(__t& nValue, const char * nName)
 	{
 		if (false == mBeg)
 		{
-			mValue += L",";
+			mValue += ",";
 		}
 		else
 		{
-			mValue += L", PRIMARY KEY (";
+			mValue += ", PRIMARY KEY (";
 		}
 		mValue += mFieldCharacter;
 		mValue += nName;
@@ -431,4 +445,150 @@ namespace std {
 		}
 	}
 
+	template <typename __t>
+	void SqlFormat::_runFormat(__t& nSqlHeadstream)
+	{
+		SqlType_ sqlType_ = nSqlHeadstream._sqlType();
+		if (mSqlTypeCreate_ == sqlType_)
+		{
+			this->_runCreate(nSqlHeadstream);
+		}
+		else if (mSqlTypeSelect_ == sqlType_)
+		{
+			this->_runSelect(nSqlHeadstream);
+		}
+		else if (mSqlTypeInsert_ == sqlType_)
+		{
+			this->_runInsert(nSqlHeadstream);
+		}
+		else if (mSqlTypeUpdate_ == sqlType_)
+		{
+			this->_runUpdate(nSqlHeadstream);
+		}
+		else if (mSqlTypeInsertUpdate_ == sqlType_)
+		{
+			this->_runInsertUpdate(nSqlHeadstream);
+		}
+		else if (mSqlTypeDelete_ == sqlType_)
+		{
+			this->_runDelete(nSqlHeadstream);
+		}
+		else
+		{
+		}
+	}
+
+	template <typename __t>
+	void SqlFormat::_runCreate(__t& nSqlHeadstream)
+	{
+		mValue += "CREATE TABLE ";
+		mValue += mFieldCharacter;
+		mValue += nSqlHeadstream._tableName();
+		mValue += mFieldCharacter;
+		mValue += "(";
+		mBeg = true;
+		mSqlDeal = mSqlDealCreate_;
+		nSqlHeadstream._runSelect(this);
+		mBeg = true;
+		mEnd = false;
+		mSqlDeal = mSqlDealPrimary_;
+		nSqlHeadstream._runSelect(this);
+		if (mEnd)
+		{
+			mValue += ")";
+		}
+		mValue += ")ENGINE=MYISAM DEFAULT CHARSET=utf8;";
+		mSqlDeal = mSqlDealNone_;
+	}
+
+	template <typename __t>
+	void SqlFormat::_runSelect(__t& nSqlHeadstream)
+	{
+		mValue += "SELECT ";
+		mBeg = true;
+		mSqlDeal = mSqlDealSelect_;
+		nSqlHeadstream._runSelect(this);
+		mValue += " FROM ";
+		mValue += mFieldCharacter;
+		mValue += nSqlHeadstream._tableName();
+		mValue += mFieldCharacter;
+		mValue += " ";
+		mSqlDeal = mSqlDealWhere_;
+		nSqlHeadstream._runWhere(this);
+		mSqlDeal = mSqlDealNone_;
+	}
+
+	template <typename __t>
+	void SqlFormat::_runInsert(__t& nSqlHeadstream)
+	{
+		mValue += "INSERT INTO ";
+		mValue += mFieldCharacter;
+		mValue += nSqlHeadstream._tableName();
+		mValue += mFieldCharacter;
+		mValue += " (";
+		mBeg = true;
+		mSqlDeal = mSqlDealSelect_;
+		nSqlHeadstream._runSelect(this);
+		mValue += ") VALUES (";
+		mBeg = true;
+		mSqlDeal = mSqlDealInsert_;
+		nSqlHeadstream._runSelect(this);
+		mValue += ") ";
+		mSqlDeal = mSqlDealWhere_;
+		nSqlHeadstream._runWhere(this);
+		mSqlDeal = mSqlDealNone_;
+	}
+
+	template <typename __t>
+	void SqlFormat::_runUpdate(__t& nSqlHeadstream)
+	{
+		mValue += "UPDATE ";
+		mValue += mFieldCharacter;
+		mValue += nSqlHeadstream._tableName();
+		mValue += mFieldCharacter;
+		mValue += " SET ";
+		mBeg = true;
+		mSqlDeal = mSqlDealUpdate_;
+		nSqlHeadstream._runSelect(this);
+		mSqlDeal = mSqlDealWhere_;
+		mValue += " ";
+		nSqlHeadstream._runWhere(this);
+		mSqlDeal = mSqlDealNone_;
+	}
+
+	template <typename __t>
+	void SqlFormat::_runInsertUpdate(__t& nSqlHeadstream)
+	{
+		mValue += "INSERT INTO ";
+		mValue += mFieldCharacter;
+		mValue += nSqlHeadstream._tableName();
+		mValue += mFieldCharacter;
+		mValue += " (";
+		mBeg = true;
+		mSqlDeal = mSqlDealSelect_;
+		nSqlHeadstream._runSelect(this);
+		mValue += ") VALUES (";
+		mBeg = true;
+		mSqlDeal = mSqlDealInsert_;
+		nSqlHeadstream._runSelect(this);
+		mValue += ") ";
+		mSqlDeal = mSqlDealInsertUpdate_;
+		nSqlHeadstream._runSelect(this);
+		mSqlDeal = mSqlDealWhere_;
+		nSqlHeadstream._runWhere(this);
+		mSqlDeal = mSqlDealNone_;
+	}
+
+	template <typename __t>
+	void SqlFormat::_runDelete(__t& nSqlHeadstream)
+	{
+		mValue = "DELETE FROM ";
+		mValue += mFieldCharacter;
+		mValue += nSqlHeadstream._tableName();
+		mValue += mFieldCharacter;
+		mValue += " ";
+		mSqlDeal = mSqlDealWhere_;
+		nSqlHeadstream._runWhere(this);
+		mSqlDeal = mSqlDealNone_;
+	}
 }
