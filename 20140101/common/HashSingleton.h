@@ -2,10 +2,13 @@
 
 namespace std {
 
-	class HashSingleton
+	class HashSingleton : public noncopyable
 	{
 	public:
 		__u32 _hashString(const char * nKey, __u16 nOffset);
+
+		HashSingleton();
+		~HashSingleton();
 	};
 
 }

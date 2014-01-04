@@ -16,4 +16,14 @@ namespace std {
 		(*nOutSize) = static_cast<__u32>(outSize);
 	}
 
+	CompressSingleton::CompressSingleton()
+	{
+
+	}
+
+	CompressSingleton::~CompressSingleton()
+	{
+
+	}
+
 }

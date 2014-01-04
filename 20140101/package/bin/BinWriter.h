@@ -2,7 +2,7 @@
 
 namespace std {
 
-	class BinWriter
+	class BinWriter : public noncopyable
 	{
 	public:
 		void _serialize(bool& nValue, const wchar_t * nName, bool nOptimal = false);

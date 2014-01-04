@@ -2,7 +2,7 @@
 
 namespace std {
 
-	class MpqReader
+	class MpqReader : public noncopyable
 	{
 	public:
 		void _runOpen(const char * nPath);

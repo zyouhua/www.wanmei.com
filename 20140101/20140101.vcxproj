@@ -25,6 +25,7 @@
     <ClCompile Include="common\CompressSingleton.cpp" />
     <ClCompile Include="common\HashSingleton.cpp" />
     <ClCompile Include="common\LogSingleton.cpp" />
+    <ClCompile Include="Main.cpp" />
     <ClCompile Include="package\bin\BinReader.cpp" />
     <ClCompile Include="package\bin\BinWriter.cpp" />
     <ClCompile Include="package\mpq\MpqExport.cpp" />
@@ -33,6 +34,9 @@
     <ClCompile Include="package\mpq\MpqReader.cpp" />
     <ClCompile Include="package\mpq\MpqWriter.cpp" />
     <ClCompile Include="package\xml\XmlReader.cpp" />
+    <ClCompile Include="property\Property.cpp" />
+    <ClCompile Include="property\PropertyMgr.cpp" />
+    <ClCompile Include="property\PropertySink.cpp" />
     <ClCompile Include="sqlQuery\SqlConnection\SqlConnection.cpp" />
     <ClCompile Include="sqlQuery\SqlConnection\SqlResult.cpp" />
     <ClCompile Include="sqlQuery\SqlConnection\SqlSingleton.cpp" />
@@ -55,6 +59,7 @@
     <ClInclude Include="common\__singleton.h" />
     <ClInclude Include="Include.h" />
     <ClInclude Include="Library.h" />
+    <ClInclude Include="Main.h" />
     <ClInclude Include="package\bin\BinReader.h" />
     <ClInclude Include="package\bin\BinWriter.h" />
     <ClInclude Include="package\mpq\MpqExport.h" />
@@ -65,6 +70,13 @@
     <ClInclude Include="package\PackageInc-.h" />
     <ClInclude Include="package\PackageInc.h" />
     <ClInclude Include="package\xml\XmlReader.h" />
+    <ClInclude Include="property\IProtertyId.h" />
+    <ClInclude Include="property\Property.h" />
+    <ClInclude Include="property\PropertyId.h" />
+    <ClInclude Include="property\PropertyInc-.h" />
+    <ClInclude Include="property\PropertyInc.h" />
+    <ClInclude Include="property\PropertyMgr.h" />
+    <ClInclude Include="property\PropertySink.h" />
     <ClInclude Include="rapidxml\rapidxml.hpp" />
     <ClInclude Include="rapidxml\rapidxml_iterators.hpp" />
     <ClInclude Include="rapidxml\rapidxml_print.hpp" />

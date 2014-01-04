@@ -2,7 +2,7 @@
 
 namespace std {
 
-	class XmlReader
+	class XmlReader : public noncopyable
 	{
 	public:
 		void _serialize(bool& nValue, const wchar_t * nName, bool nOptimal = false);

@@ -2,7 +2,7 @@
 
 namespace std {
 
-	class MpqWriter
+	class MpqWriter : public noncopyable
 	{
 	public:
 		void _runOpen(const char * nPath, __u32 nCount);

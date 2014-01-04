@@ -13,11 +13,13 @@ namespace std {
 		{
 			LogSingleton& logSingleton_ = __singleton<LogSingleton>::_instance();
 			logSingleton_._logError(log_3(nException.getErrorCode(), nException.getSQLStateCStr(), nSql));
+			throw exception();
 		}
 		catch (runtime_error& nException)
 		{
 			LogSingleton& logSingleton_ = __singleton<LogSingleton>::_instance();
 			logSingleton_._logError(log_2(nException.what(), nSql));
+			throw exception();
 		}
 		return SqlResultPtr(new SqlResult(resultSet));
 	}
@@ -32,11 +34,13 @@ namespace std {
 		{
 			LogSingleton& logSingleton_ = __singleton<LogSingleton>::_instance();
 			logSingleton_._logError(log_3(nException.getErrorCode(), nException.getSQLStateCStr(), nSql));
+			throw exception();
 		}
 		catch (runtime_error& nException)
 		{
 			LogSingleton& logSingleton_ = __singleton<LogSingleton>::_instance();
 			logSingleton_._logError(log_2(nException.what(), nSql));
+			throw exception();
 		}
 	}
 
@@ -66,11 +70,13 @@ namespace std {
 		{
 			LogSingleton& logSingleton_ = __singleton<LogSingleton>::_instance();
 			logSingleton_._logError(log_3(nException.getErrorCode(), nException.getSQLStateCStr(), nSqlFormat._sqlCommand()));
+			throw exception();
 		}
 		catch (runtime_error& nException)
 		{
 			LogSingleton& logSingleton_ = __singleton<LogSingleton>::_instance();
 			logSingleton_._logError(log_2(nException.what(), nSqlFormat._sqlCommand()));
+			throw exception();
 		}
 	}
 
@@ -86,11 +92,13 @@ namespace std {
 		{
 			LogSingleton& logSingleton_ = __singleton<LogSingleton>::_instance();
 			logSingleton_._logError(log_2(nException.getErrorCode(), nException.getSQLStateCStr()));
+			throw exception();
 		}
 		catch (runtime_error& nException)
 		{
 			LogSingleton& logSingleton_ = __singleton<LogSingleton>::_instance();
 			logSingleton_._logError(log_1(nException.what()));
+			throw exception();
 		}
 	}
 
@@ -108,11 +116,13 @@ namespace std {
 			{
 				LogSingleton& logSingleton_ = __singleton<LogSingleton>::_instance();
 				logSingleton_._logError(log_2(nException.getErrorCode(), nException.getSQLStateCStr()));
+				throw exception();
 			}
 			catch (runtime_error& nException)
 			{
 				LogSingleton& logSingleton_ = __singleton<LogSingleton>::_instance();
 				logSingleton_._logError(log_1(nException.what()));
+				throw exception();
 			}
 		}
 		if (nullptr != mConnection)
@@ -127,11 +137,13 @@ namespace std {
 			{
 				LogSingleton& logSingleton_ = __singleton<LogSingleton>::_instance();
 				logSingleton_._logError(log_2(nException.getErrorCode(), nException.getSQLStateCStr()));
+				throw exception();
 			}
 			catch (runtime_error& nException)
 			{
 				LogSingleton& logSingleton_ = __singleton<LogSingleton>::_instance();
 				logSingleton_._logError(log_1(nException.what()));
+				throw exception();
 			}
 		}
 	}

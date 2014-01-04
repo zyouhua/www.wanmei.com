@@ -18,4 +18,14 @@ namespace std {
 		return seed1;
 	}
 
+	HashSingleton::HashSingleton()
+	{
+
+	}
+
+	HashSingleton::~HashSingleton()
+	{
+
+	}
+
 }

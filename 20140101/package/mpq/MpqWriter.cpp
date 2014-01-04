@@ -17,7 +17,7 @@ namespace std {
 		__u32 size_ = this->_readBuf(nPath);
 		__u32 end_ = this->_writeBuf(size_);
 		shared_ptr<MpqHash> mpqHash(new MpqHash());
-		HashSingleton hashSingleton_ = __singleton<HashSingleton>::_instance();
+		HashSingleton& hashSingleton_ = __singleton<HashSingleton>::_instance();
 		mpqHash->_setHash1(hashSingleton_._hashString(nKey, 0x100));
 		mpqHash->_setHash2(hashSingleton_._hashString(nKey, 0x200));
 		mpqHash->_setBeg(beg_);
@@ -45,7 +45,7 @@ namespace std {
 	{
 		__u32 result_ = 5 * 1024 * 1024;
 		memset(mCompress, 0, sizeof(mCompress));
-		CompressSingleton compressSingleton_ = __singleton<CompressSingleton>::_instance();
+		CompressSingleton& compressSingleton_ = __singleton<CompressSingleton>::_instance();
 		compressSingleton_._runBZip2(mCommon, nSize, mCompress, &result_);
 		mBinWriter._serialize(mCompress, result_);
 		return result_;

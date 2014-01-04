@@ -120,6 +120,18 @@
     <ClCompile Include="sqlQuery\SqlFormat\StringSqlParamter.cpp">
       <Filter>SqlQuery\SqlFormat</Filter>
     </ClCompile>
+    <ClCompile Include="property\Property.cpp">
+      <Filter>Property</Filter>
+    </ClCompile>
+    <ClCompile Include="property\PropertyMgr.cpp">
+      <Filter>Property</Filter>
+    </ClCompile>
+    <ClCompile Include="property\PropertySink.cpp">
+      <Filter>Property</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>Include</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="bzlib\bzlib.h">
@@ -241,6 +253,30 @@
     </ClInclude>
     <ClInclude Include="sqlQuery\SqlFormat\StringSqlParamter.h">
       <Filter>SqlQuery\SqlFormat</Filter>
+    </ClInclude>
+    <ClInclude Include="property\Property.h">
+      <Filter>Property</Filter>
+    </ClInclude>
+    <ClInclude Include="property\PropertyMgr.h">
+      <Filter>Property</Filter>
+    </ClInclude>
+    <ClInclude Include="property\PropertyInc.h">
+      <Filter>Property</Filter>
+    </ClInclude>
+    <ClInclude Include="property\PropertyInc-.h">
+      <Filter>Property</Filter>
+    </ClInclude>
+    <ClInclude Include="property\IProtertyId.h">
+      <Filter>Property</Filter>
+    </ClInclude>
+    <ClInclude Include="property\PropertyId.h">
+      <Filter>Property</Filter>
+    </ClInclude>
+    <ClInclude Include="property\PropertySink.h">
+      <Filter>Property</Filter>
+    </ClInclude>
+    <ClInclude Include="Main.h">
+      <Filter>Include</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

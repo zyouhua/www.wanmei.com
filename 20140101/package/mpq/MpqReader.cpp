@@ -15,7 +15,7 @@ namespace std {
 
 	bool MpqReader::_runCheck(const char * nKey)
 	{
-		HashSingleton hashSingleton_ = __singleton<HashSingleton>::_instance();
+		HashSingleton& hashSingleton_ = __singleton<HashSingleton>::_instance();
 		unsigned long hash1 = hashSingleton_._hashString(nKey, 0x100);
 		unsigned long hash2 = hashSingleton_._hashString(nKey, 0x200);
 		list<shared_ptr<MpqHash>>::iterator it = mMpqHash.begin();
@@ -33,7 +33,7 @@ namespace std {
 	void MpqReader::_readKey(const char * nKey, char ** nBuf, __u32 * nSize)
 	{
 		shared_ptr<MpqHash> mpqHash;
-		HashSingleton hashSingleton_ = __singleton<HashSingleton>::_instance();
+		HashSingleton& hashSingleton_ = __singleton<HashSingleton>::_instance();
 		unsigned long hash1 = hashSingleton_._hashString(nKey, 0x100);
 		unsigned long hash2 = hashSingleton_._hashString(nKey, 0x200);
 		list<shared_ptr<MpqHash>>::iterator it = mMpqHash.begin();
@@ -55,7 +55,7 @@ namespace std {
 		mBinReader._serialize(mCommon, mpqHash->_getEnd());
 		(*nBuf) = new char[mpqHash->_getSize()];
 		(*nSize) = mpqHash->_getSize();
-		CompressSingleton compressSingleton_ = __singleton<CompressSingleton>::_instance();
+		CompressSingleton& compressSingleton_ = __singleton<CompressSingleton>::_instance();
 		compressSingleton_._unBZip2(mCommon, mpqHash->_getEnd(), (*nBuf), nSize);
 	}
 

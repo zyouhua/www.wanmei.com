@@ -14,7 +14,7 @@ namespace std {
 
 	namespace src = boost::log::sources;
 
-	class LogSingleton
+	class LogSingleton : public noncopyable
 	{
 	public:
 		void _logError(boost::format& nFormat);

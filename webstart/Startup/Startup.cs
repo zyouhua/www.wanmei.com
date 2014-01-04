@@ -42,6 +42,9 @@ namespace webstart
         [DllImport(@"20140101.dll")]
         static extern void m00000004(IntPtr n1, uint n2);
 
+        [DllImport(@"20140101.dll")]
+        static extern void mn00000001();
+
         static void _startPlugins()
         {
 #if DEBUG
@@ -51,6 +54,7 @@ namespace webstart
             string systemPath_ = HostingEnvironment.MapPath(@"~");
             systemPath_ = Path.Combine(systemPath_, @"bin\20140101.dat");
 #endif
+            mn00000001();
             m00000001(systemPath_);
             _pluginList();
         }

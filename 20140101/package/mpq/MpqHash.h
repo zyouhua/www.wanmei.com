@@ -2,7 +2,7 @@
 
 namespace std {
 
-	class MpqHash
+	class MpqHash : public noncopyable
 	{
 	public:
 		static __u32 _hashSize();

@@ -13,6 +13,8 @@ namespace webstart
     // 请访问 http://go.microsoft.com/?LinkId=9394801
     public class MvcApplication : System.Web.HttpApplication
     {
+        [DllImport(@"20140101.dll")]
+        static extern void mn00000002();
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
@@ -20,13 +22,22 @@ namespace webstart
             WebApiConfig.Register(GlobalConfiguration.Configuration);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+            mn00000002();
         }
+
+        [DllImport(@"20140101.dll")]
+        static extern void mn00000003();
+
+        [DllImport(@"20140101.dll")]
+        static extern void mn00000004();
 
         [DllImport(@"20140101.dll")]
         static extern void m00000005();
         protected void Application_End()
         {
             m00000005();
+            mn00000003();
+            mn00000004();
         }
     }
 }
