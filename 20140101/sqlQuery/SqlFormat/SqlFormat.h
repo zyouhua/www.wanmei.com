@@ -55,6 +55,8 @@ namespace std {
 
 		void _serialize(list<string>& nValue, const char * nName);
 
+		void _serialize(void * nValue, __i32 nLength, const char * nName, unsigned short nSqlFieldId = mSqlFieldIdNone_);
+
 		template<class __t>
 		void _addHeadstream(__t& nSqlHeadstreams);
 
@@ -82,6 +84,8 @@ namespace std {
 		void _runInsert(__t& nValue, const char * nName);
 
 		void _runInsert(string& nValue, const char * nName);
+
+		void _runInsert(void * nValue, __i32 nLength, const char * nName);
 
 		template <typename __t>
 		void _runUpdate(list<__t>& nValue, const char * nName);
@@ -158,6 +162,7 @@ namespace std {
 		string mName;
 		bool mBeg;
 		bool mEnd;
+		__i32 mIndex;
 
 	private:
 		static string mValueCharacter;

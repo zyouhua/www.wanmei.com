@@ -1,17 +1,26 @@
 #include "../SqlInc-.h"
 
-
 namespace std {
+
+	void SqlParamter::_setIndex(__i32 nIndex)
+	{
+		mIdex = nIndex;
+	}
 
 	__i32 SqlParamter::_getIndex()
 	{
 		return mIdex;
 	}
 
-	SqlParamter::SqlParamter(__i32 nIndex, char * nBuf, size_t nSize)
-		: mIdex(nIndex)
+	SqlParamter::SqlParamter()
+		: mIdex(0)
 	{
-		setg(nBuf, nBuf, nBuf + nSize);
+
+	}
+
+	SqlParamter::~SqlParamter()
+	{
+		mIdex = 0;
 	}
 
 }

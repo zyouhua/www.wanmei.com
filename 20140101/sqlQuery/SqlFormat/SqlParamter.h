@@ -2,14 +2,17 @@
 
 namespace std {
 
-	class SqlParamter : public streambuf
+	class SqlParamter
 	{
 	public:
+		virtual void _runStatement(sql::PreparedStatement * nStatement) = 0;
+		void _setIndex(__i32 nIndex);
 		__i32 _getIndex();
 
-		SqlParamter(__i32 nIndex, char * nBuf, size_t nSize);
+		SqlParamter();
+		virtual ~SqlParamter();
 
-	private:
+	protected:
 		__i32 mIdex;
 	};
 	typedef shared_ptr<SqlParamter> SqlParamterPtr;

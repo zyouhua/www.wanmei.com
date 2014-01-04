@@ -51,7 +51,7 @@ namespace std {
 				for ( ; it != nSqlFormat.mSqlParamter.end(); ++it )
 				{
 					SqlParamterPtr& sqlParamter = (*it);
-					statement->setBlob(sqlParamter->_getIndex(), )
+					sqlParamter->_runStatement(statement);
 				}
 				statement->executeUpdate();
 				statement->close();
@@ -65,12 +65,12 @@ namespace std {
 		catch (SQLException& nException)
 		{
 			LogSingleton& logSingleton_ = __singleton<LogSingleton>::_instance();
-			logSingleton_._logError(log_3(nException.getErrorCode(), nException.getSQLStateCStr(), nSql));
+			logSingleton_._logError(log_3(nException.getErrorCode(), nException.getSQLStateCStr(), nSqlFormat._sqlCommand()));
 		}
 		catch (runtime_error& nException)
 		{
 			LogSingleton& logSingleton_ = __singleton<LogSingleton>::_instance();
-			logSingleton_._logError(log_2(nException.what(), nSql));
+			logSingleton_._logError(log_2(nException.what(), nSqlFormat._sqlCommand()));
 		}
 	}
 

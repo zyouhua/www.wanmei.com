@@ -7,7 +7,8 @@ namespace std {
 	public:
 		template<class __t>
 		void _runSql(SqlFormat& nSqlFormat, __t& nSqlHeadstream);
-		void _runSql(SqlFormat& nSqlFormat);
+		void _runUpdate(SqlFormat& nSqlFormat);
+		void _runSql(string& nSql);
 		SqlConnectionPtr _getConnection();
 		void _runInit();
 

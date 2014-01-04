@@ -2,10 +2,16 @@
 
 namespace std {
 
-	void SqlSingleton::_runSql(SqlFormat& nSqlFormat)
+	void SqlSingleton::_runUpdate(SqlFormat& nSqlFormat)
 	{
 		SqlConnectionPtr& sqlConnection = this->_getConnection();
-		sqlConnection->_runSql(nSqlFormat);
+		sqlConnection->_runUpdate(nSqlFormat);
+	}
+
+	void SqlSingleton::_runSql(string& nSql)
+	{
+		SqlConnectionPtr& sqlConnection = this->_getConnection();
+		sqlConnection->_runSql(nSql);
 	}
 
 	SqlConnectionPtr SqlSingleton::_getConnection()

@@ -114,6 +114,12 @@
     <ClCompile Include="sqlQuery\SqlFormat\SqlParamter.cpp">
       <Filter>SqlQuery\SqlFormat</Filter>
     </ClCompile>
+    <ClCompile Include="sqlQuery\SqlFormat\BlobSqlParamter.cpp">
+      <Filter>SqlQuery\SqlFormat</Filter>
+    </ClCompile>
+    <ClCompile Include="sqlQuery\SqlFormat\StringSqlParamter.cpp">
+      <Filter>SqlQuery\SqlFormat</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="bzlib\bzlib.h">
@@ -228,6 +234,12 @@
       <Filter>SqlQuery\SqlConnection</Filter>
     </ClInclude>
     <ClInclude Include="sqlQuery\SqlFormat\SqlParamter.h">
+      <Filter>SqlQuery\SqlFormat</Filter>
+    </ClInclude>
+    <ClInclude Include="sqlQuery\SqlFormat\BlobSqlParamter.h">
+      <Filter>SqlQuery\SqlFormat</Filter>
+    </ClInclude>
+    <ClInclude Include="sqlQuery\SqlFormat\StringSqlParamter.h">
       <Filter>SqlQuery\SqlFormat</Filter>
     </ClInclude>
   </ItemGroup>

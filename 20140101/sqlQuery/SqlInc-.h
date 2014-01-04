@@ -5,6 +5,8 @@
 #include <mysql_driver.h>
 #include <cppconn/exception.h>
 
+#include "SqlFormat/BlobSqlParamter.h"
+#include "SqlFormat/StringSqlParamter.h"
 
 static char * MODULE_NAME = "SqlQuery";
 

@@ -36,8 +36,10 @@
     <ClCompile Include="sqlQuery\SqlConnection\SqlConnection.cpp" />
     <ClCompile Include="sqlQuery\SqlConnection\SqlResult.cpp" />
     <ClCompile Include="sqlQuery\SqlConnection\SqlSingleton.cpp" />
-    <ClCompile Include="sqlQuery\SqlFormat\SqlFormat.cpp" />
+    <ClCompile Include="sqlQuery\SqlFormat\BlobSqlParamter.cpp" />
     <ClCompile Include="sqlQuery\SqlFormat\SqlParamter.cpp" />
+    <ClCompile Include="sqlQuery\SqlFormat\SqlFormat.cpp" />
+    <ClCompile Include="sqlQuery\SqlFormat\StringSqlParamter.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="bzlib\bzlib.h" />
@@ -70,11 +72,13 @@
     <ClInclude Include="sqlQuery\SqlConnection\SqlConnection.h" />
     <ClInclude Include="sqlQuery\SqlConnection\SqlResult.h" />
     <ClInclude Include="sqlQuery\SqlConnection\SqlSingleton.h" />
+    <ClInclude Include="sqlQuery\SqlFormat\BlobSqlParamter.h" />
+    <ClInclude Include="sqlQuery\SqlFormat\SqlParamter.h" />
     <ClInclude Include="sqlQuery\SqlFormat\SqlDeal_.h" />
     <ClInclude Include="sqlQuery\SqlFormat\SqlFieldId_.h" />
     <ClInclude Include="sqlQuery\SqlFormat\SqlFormat.h" />
-    <ClInclude Include="sqlQuery\SqlFormat\SqlParamter.h" />
     <ClInclude Include="sqlQuery\SqlFormat\SqlType_.h" />
+    <ClInclude Include="sqlQuery\SqlFormat\StringSqlParamter.h" />
     <ClInclude Include="sqlQuery\SqlInc-.h" />
     <ClInclude Include="sqlQuery\SqlInc.h" />
     <ClInclude Include="SysInc.h" />

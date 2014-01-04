@@ -745,6 +745,25 @@ namespace std {
 		}
 	}
 
+	void SqlFormat::_serialize(void * nValue, __i32 nLength, const char * nName, unsigned short nSqlFieldId)
+	{
+		if (mSqlDealCreate_ == mSqlDeal)
+		{
+			this->_runCreate(nValue, nName, "BLOB", nSqlFieldId);
+		}
+		else if (mSqlDealSelect_ == mSqlDeal)
+		{
+			this->_runSelect(nValue, nName);
+		}
+		else if (mSqlDealInsert_ == mSqlDeal)
+		{
+			this->_runInsert(nValue, nLength, nName);
+		}
+		else
+		{
+		}
+	}
+
 	const string& SqlFormat::_sqlCommand()
 	{
 		return mValue;
@@ -770,6 +789,23 @@ namespace std {
 		}
 	}
 	
+	void SqlFormat::_runInsert(void * nValue, __i32 nLength, const char * nName)
+	{
+		if (false == mBeg)
+		{
+			mValue += ",";
+		}
+		mValue += "?";
+		char * value_ = reinterpret_cast<char *>(nValue);
+		SqlParamterPtr sqlParamter(new BlobSqlParamter(mIndex, value_, nLength));
+		mIndex++;
+		mSqlParamter.push_back(sqlParamter);
+		if (mBeg)
+		{
+			mBeg = false;
+		}
+	}
+
 	void SqlFormat::_runUpdate(string& nValue, const char * nName)
 	{
 		if (false == mBeg)
@@ -844,6 +880,7 @@ namespace std {
 		mName = "";
 		mBeg = false;
 		mEnd = false;
+		mIndex = 1;
 	}
 
 	SqlFormat::~SqlFormat()
@@ -854,6 +891,7 @@ namespace std {
 		mName = "";
 		mBeg = false;
 		mEnd = false;
+		mIndex = 1;
 	}
 
 	string SqlFormat::mValueCharacter = "'";
