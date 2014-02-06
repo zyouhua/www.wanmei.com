@@ -44,6 +44,12 @@
     <ClCompile Include="..\20140101\account\AccountMain.cpp">
       <Filter>Account</Filter>
     </ClCompile>
+    <ClCompile Include="..\20140101\account\AccountMgr.cpp">
+      <Filter>Account\AccountService</Filter>
+    </ClCompile>
+    <ClCompile Include="..\20140101\account\AccountExport.cpp">
+      <Filter>Account</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\20140101\account\AccountService.h">
@@ -53,6 +59,12 @@
       <Filter>Account</Filter>
     </ClInclude>
     <ClInclude Include="..\20140101\account\AccountMain.h">
+      <Filter>Account</Filter>
+    </ClInclude>
+    <ClInclude Include="..\20140101\account\AccountMgr.h">
+      <Filter>Account\AccountService</Filter>
+    </ClInclude>
+    <ClInclude Include="..\20140101\account\AccountExport.h">
       <Filter>Account</Filter>
     </ClInclude>
   </ItemGroup>

@@ -27,4 +27,14 @@ namespace std {
 		mCreates[propertyId_] = nPropertyId;
 	}
 
+	PropertySink::PropertySink()
+	{
+		mCreates.clear();
+	}
+
+	PropertySink::~PropertySink()
+	{
+		mCreates.clear();
+	}
+
 }

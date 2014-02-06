@@ -6,12 +6,12 @@ namespace std {
 
 	void AccountMain::_runPreinit()
 	{
-		AccountService accountService = __singleton<AccountService>::_instance();
+		__singleton<AccountService>::_instance();
 	}
 
 	void AccountMain::_runInit()
 	{
-		AccountService accountService = __singleton<AccountService>::_instance();
+		AccountService& accountService = __singleton<AccountService>::_instance();
 		accountService._runInit();
 	}
 

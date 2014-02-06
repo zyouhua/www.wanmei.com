@@ -15,7 +15,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="account\AccountExport.cpp" />
     <ClCompile Include="account\AccountMain.cpp" />
+    <ClCompile Include="account\AccountMgr.cpp" />
     <ClCompile Include="account\AccountService.cpp" />
     <ClCompile Include="bzlib\blocksort.c" />
     <ClCompile Include="bzlib\bzlib.c" />
@@ -52,9 +54,11 @@
     <ClCompile Include="sqlQuery\SqlMain.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="account\AccountExport.h" />
     <ClInclude Include="account\AccountInc-.h" />
     <ClInclude Include="account\AccountInc.h" />
     <ClInclude Include="account\AccountMain.h" />
+    <ClInclude Include="account\AccountMgr.h" />
     <ClInclude Include="account\AccountService.h" />
     <ClInclude Include="bzlib\bzlib.h" />
     <ClInclude Include="bzlib\bzlib_private.h" />

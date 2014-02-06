@@ -98,12 +98,16 @@ copy *.xml $(SolutionDir)..\bin\home\www.wanmei.com\account\$account.core\*.xml
     <Xml Include="sqlConfig.xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\20140101\account\AccountExport.cpp" />
     <ClCompile Include="..\20140101\account\AccountMain.cpp" />
+    <ClCompile Include="..\20140101\account\AccountMgr.cpp" />
     <ClCompile Include="..\20140101\account\AccountService.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\20140101\account\AccountExport.h" />
     <ClInclude Include="..\20140101\account\AccountInc.h" />
     <ClInclude Include="..\20140101\account\AccountMain.h" />
+    <ClInclude Include="..\20140101\account\AccountMgr.h" />
     <ClInclude Include="..\20140101\account\AccountService.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -2,28 +2,29 @@
 
 namespace std {
 
-	__u64 HashSingleton::_runId(string nName)
+	__u64 HashSingleton::_runId(const char * nName)
 	{
-		//DateTime dataTime_ = DateTime.Now;
-		DateTime dataTime_ = new DateTime(2013, 9, 24);
-		long minute_ = 100000000;
-		long baseTime_ = 6349259520;
-		uint ticks_ = (uint)(dataTime_.Ticks / minute_ - baseTime_);
-		long result_ = (long)_runCommon(nName);
+		ptime time_(second_clock::local_time());
+		time_period timePeriod(mTime, time_);
+		time_duration timeDuration = timePeriod.length();
+		__u64 seconds_ = timeDuration.total_seconds();
+		seconds_ /= 10;
+		__u64 result_ = this->_runCommon(nName);
 		result_ <<= 32;
-		result_ += ticks_;
+		result_ += seconds_;
 		return result_;
 	}
 
 	__u64 HashSingleton::_runId(__u32 nId)
 	{
-		DateTime dataTime_ = DateTime.Now;
-		long minute_ = 100000000;
-		long baseTime_ = 6349259520;
-		uint ticks_ = (uint)(dataTime_.Ticks / minute_ - baseTime_);
-		long result_ = (long)nId;
+		ptime time_(second_clock::local_time());
+		time_period timePeriod(mTime, time_);
+		time_duration timeDuration = timePeriod.length();
+		__u64 seconds_ = timeDuration.total_seconds();
+		seconds_ /= 10;
+		__u64 result_ = nId;
 		result_ <<= 32;
-		result_ += ticks_;
+		result_ += seconds_;
 		return result_;
 	}
 
@@ -88,6 +89,11 @@ namespace std {
 		}
 
 		return seed1;
+	}
+
+	void HashSingleton::_runInit()
+	{
+		mTime = time_from_string(string(INITTIME));
 	}
 
 	HashSingleton::HashSingleton()

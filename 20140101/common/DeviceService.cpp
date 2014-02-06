@@ -11,8 +11,8 @@ namespace std {
 	void DeviceService::_runInit()
 	{
 		HashSingleton& hashSingleton = __singleton<HashSingleton>::_instance();
-		mDeviceTypes.Add(hashSingleton._runComputer());
-		mDeviceTypes.Add(hashSingleton._runCellphone());
+		mDeviceTypes.insert(hashSingleton._runComputer());
+		mDeviceTypes.insert(hashSingleton._runCellphone());
 	}
 
 	DeviceService::DeviceService()

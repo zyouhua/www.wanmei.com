@@ -150,6 +150,12 @@
     <ClCompile Include="common\DeviceService.cpp">
       <Filter>Common</Filter>
     </ClCompile>
+    <ClCompile Include="account\AccountMgr.cpp">
+      <Filter>Account</Filter>
+    </ClCompile>
+    <ClCompile Include="account\AccountExport.cpp">
+      <Filter>Account</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="bzlib\bzlib.h">
@@ -319,6 +325,12 @@
     </ClInclude>
     <ClInclude Include="common\DeviceService.h">
       <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="account\AccountMgr.h">
+      <Filter>Account</Filter>
+    </ClInclude>
+    <ClInclude Include="account\AccountExport.h">
+      <Filter>Account</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

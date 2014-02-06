@@ -2,7 +2,7 @@
 <packages>
 
   <package>
-    <__t name="mpq://www.wanmei.com/account\account.core*accountConfig.xml"
+    <__t name="mpq://www.wanmei.com/account\account.core*accountService.xml"
          value="accountConfig.xml"/>
     <__t name="mpq://www.wanmei.com/account\account.core*sqlConfig.xml"
          value="sqlConfig.xml"/>

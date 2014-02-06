@@ -19,6 +19,9 @@ namespace std {
 
 	void CommonMain::_runInit()
 	{
+		HashSingleton& hashSingleton = __singleton<HashSingleton>::_instance();
+		hashSingleton._runInit();
+
 		DeviceService& deviceService = __singleton<DeviceService>::_instance();
 		deviceService._runInit();
 	}
